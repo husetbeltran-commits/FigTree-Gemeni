@@ -220,7 +220,85 @@ Han bjuder in dig till att lära känna honom, inte bara som en symbol, utan som
     createdAt: '2025-12-01',
     featured: false,
     mainImageUrl: 'public/images/vem-ar-jesus-v2.png'
-  }
+  },
+  {
+  id: '4',
+  title: 'Bibeln: myt eller tillförlitlig källa?',
+  body: `**Vi ser Bibeln överallt – på hotellrum, i högtider, på sociala medier. Men kan man verkligen lita på den? Är den historiskt trovärdig, eller bara religiösa legender? Här är vad vi faktiskt vet.**
+
+---
+
+### Vad menar vi med ”trovärdig”?
+
+Att något är trovärdigt betyder inte att det måste bevisas i ett laboratorium. Det betyder att det står pall för granskning.
+
+Vi tror på massor av saker i vardagen utan att själva kunna testa dem i mikroskop. Som historia, relationer, värderingar – eller ögonvittnesskildringar. Därför är det rimligt att fråga: **Håller Bibeln, om vi tar den på allvar som ett historiskt dokument?**
+
+---
+
+### En av världens bäst bevarade antika texter
+
+Bibeln är inte en bok. Den är **66 böcker, skrivna av över 40 författare** under ungefär 1500 år, på tre kontinenter – men med en sammanhängande berättelse.
+
+Nya testamentet har **över 5 800 bevarade grekiska handskrifter**, plus tusentals översättningar. Det är mer än något annat från antiken. De är dessutom nära i tid till originalen – vilket gör att vi **kan veta med mycket hög precision vad som skrevs från början**.
+
+Till skillnad från viskleken har Bibeln bevarats med extrem noggrannhet.
+
+---
+
+### Arkeologin backar upp detaljerna
+
+Bibeln beskriver platser, folk och händelser – och gång på gång har arkeologin bekräftat att dessa faktiskt existerat:
+
+- Pontius Pilatus – bekräftad genom inskription i Caesarea.
+- Davids dynasti – omnämnd i Tel Dan-stelen.
+- Babyloniska rikets fall – återges i flera oberoende källor.
+- Jerusalem och tempelområdet – stämmer med arkeologiska fynd.
+
+Det betyder inte att varje berättelse kan bevisas. Men det **visar att Bibeln är djupare rotad i historien än många tror**.
+
+---
+
+### Den känns för äkta för att vara påhitt
+
+Om du hittar på en religion – skriver du då in att dina ledare tvivlade, svek sin vän, och att kvinnor (som då inte ansågs trovärdiga vittnen) var de första som såg uppståndelsen?
+
+Förmodligen inte.
+
+Bibeln är ärlig. Den är inte rädd för komplexitet. Och det gör den – märkligt nog – mer trovärdig.
+
+---
+
+### Så… är det bara en religiös bok?
+
+Nej, det är mycket mer.
+
+Bibeln är **historiskt stark, textkritiskt välbevarad, arkeologiskt förankrad och litterärt komplex**. Men framför allt: den säger att det finns en Gud som talar – genom historia, poesi, lag, brev… och till sist genom en person: Jesus.
+
+Det är där allting ställs på sin spets. För om Jesus är den Bibeln säger att han är – då är det här inte bara gamla texter. Då är det **en röst som fortfarande talar**.
+
+---
+
+### Vad betyder det för dig?
+
+Du behöver inte blint tro. Men du får gärna undersöka. Börja läsa själv. Prata med någon som läst. Våga vara nyfiken.
+
+Bibeln säger:
+
+> ”Den som söker, han finner” (Matteus 7:8).
+
+---
+
+### En enkel bön för klarhet
+
+*Gud, om du finns – hjälp mig att förstå. Ge mig mod att se det jag kanske missat. Visa mig inte bara enkla svar, utan sanningen, även när den är större än jag kan greppa. Hjälp mig att våga utforska. Amen.*`,
+  categories: ['Evangeliet', 'Bibeln'],
+  tags: ['Teologi', 'Bibeln', 'Vem är Jesus-serien'],
+  createdAt: '2025-12-01',
+  featured: false,
+  mainImageUrl: '/images/bibeln-myt-eller-tillforlitlig-kalla.png'
+},
+  
 ];
 
 export const VERSES: BibleVerse[] = [
