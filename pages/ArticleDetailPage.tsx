@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ARTICLES } from '../data/mockData';
@@ -27,7 +28,7 @@ const ArticleDetailPage: React.FC = () => {
        </div>
 
        {article.mainImageUrl && (
-         <div className="-mt-[72px] h-[300px] w-full relative">
+         <div className="-mt-[72px] h-[300px] w-full relative bg-surface-variant">
            <img src={article.mainImageUrl} alt="" className="w-full h-full object-cover" />
            <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
          </div>
