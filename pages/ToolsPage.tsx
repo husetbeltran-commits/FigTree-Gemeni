@@ -52,9 +52,9 @@ const ToolsPage: React.FC = () => {
           <Link 
             key={tool.path}
             to={tool.path}
-            className="flex items-start gap-4 p-4 bg-surface rounded-xl border border-white/5 hover:border-accent/50 active:scale-[0.98] transition-all"
+            className="flex items-start gap-4 p-4 bg-surface rounded-xl border border-border hover:border-accent/50 active:scale-[0.98] transition-all"
           >
-            <div className="bg-white/5 p-3 rounded-full text-accent shrink-0">
+            <div className="bg-surface-variant p-3 rounded-full text-accent shrink-0">
               <tool.icon size={24} />
             </div>
             <div>

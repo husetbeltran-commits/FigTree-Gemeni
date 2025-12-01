@@ -22,7 +22,6 @@ const ChatPage: React.FC = () => {
   }, [messages]);
 
   // STUB: This function simulates the backend call to OpenAI
-  // In production: POST /api/chat { message: question } -> Server calls OpenAI API
   const askFaithAI = async (question: string) => {
     setIsLoading(true);
     
@@ -58,17 +57,17 @@ const ChatPage: React.FC = () => {
     <div className="flex flex-col h-screen bg-background animate-fade-in">
       <Header 
         title="Fråga om tro" 
-        backButton={<Link to="/tools" className="text-secondary"><ChevronLeft /></Link>}
+        backButton={<Link to="/tools" className="text-secondary hover:text-primary"><ChevronLeft /></Link>}
       />
 
       {/* Chat Area */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((msg) => (
           <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`max-w-[85%] rounded-2xl p-4 ${
+            <div className={`max-w-[85%] rounded-2xl p-4 shadow-sm ${
               msg.sender === 'user' 
                 ? 'bg-accent text-white rounded-br-none' 
-                : 'bg-surface border border-white/5 text-gray-200 rounded-bl-none'
+                : 'bg-surface border border-border text-primary rounded-bl-none'
             }`}>
               {msg.sender === 'ai' && (
                 <div className="flex items-center gap-1 mb-2 text-accent text-xs font-bold uppercase tracking-wider">
@@ -82,7 +81,7 @@ const ChatPage: React.FC = () => {
         ))}
         {isLoading && (
           <div className="flex justify-start">
-             <div className="bg-surface border border-white/5 p-4 rounded-2xl rounded-bl-none">
+             <div className="bg-surface border border-border p-4 rounded-2xl rounded-bl-none">
                <div className="flex gap-1">
                  <div className="w-2 h-2 bg-secondary/50 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
                  <div className="w-2 h-2 bg-secondary/50 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
@@ -95,7 +94,7 @@ const ChatPage: React.FC = () => {
       </div>
 
       {/* Input Area */}
-      <div className="fixed bottom-[64px] left-0 right-0 bg-background border-t border-white/5 p-3">
+      <div className="fixed bottom-[64px] left-0 right-0 bg-background border-t border-border p-3 transition-colors">
         <div className="flex items-center gap-2 max-w-3xl mx-auto">
           <input
             type="text"
@@ -103,12 +102,12 @@ const ChatPage: React.FC = () => {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             placeholder="Skriv din fråga här..."
-            className="flex-1 bg-surface text-white placeholder-secondary/50 rounded-full px-4 py-3 focus:outline-none focus:ring-1 focus:ring-accent"
+            className="flex-1 bg-surface text-primary placeholder-secondary/50 border border-border rounded-full px-4 py-3 focus:outline-none focus:ring-1 focus:ring-accent transition-colors"
           />
           <button 
             onClick={handleSend}
             disabled={!input.trim() || isLoading}
-            className="bg-accent disabled:bg-surface disabled:text-secondary text-white p-3 rounded-full hover:bg-accent-hover transition-colors"
+            className="bg-accent disabled:bg-surface disabled:text-secondary text-white p-3 rounded-full hover:bg-accent-hover transition-colors shadow-md"
           >
             <Send size={20} />
           </button>

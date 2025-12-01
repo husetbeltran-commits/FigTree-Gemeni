@@ -23,7 +23,7 @@ const ArticlesPage: React.FC = () => {
     <div className="animate-fade-in min-h-screen">
       <Header 
         title="Artiklar" 
-        backButton={<Link to="/" className="text-secondary"><ChevronLeft /></Link>}
+        backButton={<Link to="/" className="text-secondary hover:text-primary"><ChevronLeft /></Link>}
       />
       
       <div className="p-4 space-y-4">
@@ -33,7 +33,7 @@ const ArticlesPage: React.FC = () => {
           <input 
             type="text" 
             placeholder="Sök artikel..." 
-            className="w-full bg-surface border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-accent"
+            className="w-full bg-surface border border-border rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-accent text-primary placeholder-secondary/50"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -43,13 +43,13 @@ const ArticlesPage: React.FC = () => {
         <div className="space-y-4">
           {filtered.map(article => (
             <Link key={article.id} to={`/articles/${article.id}`} className="block group">
-              <div className="bg-surface rounded-xl overflow-hidden border border-white/5 hover:border-white/20 transition-all">
+              <div className="bg-surface rounded-xl overflow-hidden border border-border hover:border-accent/30 transition-all shadow-sm">
                 {article.mainImageUrl && (
                   <div className="h-40 w-full overflow-hidden">
                     <img 
                       src={article.mainImageUrl} 
                       alt={article.title} 
-                      className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 )}

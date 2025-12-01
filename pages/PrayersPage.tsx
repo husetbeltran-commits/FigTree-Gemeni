@@ -20,7 +20,7 @@ const PrayersPage: React.FC = () => {
     <div className="animate-fade-in min-h-screen">
       <Header 
         title="Bön och meditation" 
-        backButton={<Link to="/" className="text-secondary"><ChevronLeft /></Link>}
+        backButton={<Link to="/" className="text-secondary hover:text-primary"><ChevronLeft /></Link>}
       />
       
       <div className="p-4 space-y-4">
@@ -30,7 +30,7 @@ const PrayersPage: React.FC = () => {
           <input 
             type="text" 
             placeholder="Sök bön..." 
-            className="w-full bg-surface border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-accent"
+            className="w-full bg-surface border border-border rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-accent text-primary placeholder-secondary/50"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -40,7 +40,7 @@ const PrayersPage: React.FC = () => {
         <div className="flex flex-wrap gap-2">
           <button 
             onClick={() => setSelectedCat(null)}
-            className={`px-3 py-1 rounded-full text-xs border transition-colors ${!selectedCat ? 'bg-accent border-accent text-white' : 'bg-transparent border-white/20 text-secondary'}`}
+            className={`px-3 py-1 rounded-full text-xs border transition-colors ${!selectedCat ? 'bg-accent border-accent text-white' : 'bg-transparent border-border text-secondary'}`}
           >
             Alla
           </button>
@@ -48,7 +48,7 @@ const PrayersPage: React.FC = () => {
             <button
               key={cat}
               onClick={() => setSelectedCat(cat === selectedCat ? null : cat)}
-              className={`px-3 py-1 rounded-full text-xs border transition-colors ${cat === selectedCat ? 'bg-accent border-accent text-white' : 'bg-transparent border-white/20 text-secondary'}`}
+              className={`px-3 py-1 rounded-full text-xs border transition-colors ${cat === selectedCat ? 'bg-accent border-accent text-white' : 'bg-transparent border-border text-secondary'}`}
             >
               {cat}
             </button>
@@ -58,14 +58,14 @@ const PrayersPage: React.FC = () => {
         {/* List */}
         <div className="grid gap-3">
           {filtered.map(prayer => (
-            <Link key={prayer.id} to={`/prayers/${prayer.id}`} className="bg-surface p-5 rounded-xl border border-white/5 hover:border-white/20">
+            <Link key={prayer.id} to={`/prayers/${prayer.id}`} className="bg-surface p-5 rounded-xl border border-border hover:border-accent/30 transition-colors">
               <h3 className="font-bold text-lg mb-2 text-primary">{prayer.title}</h3>
               <p className="text-sm text-secondary mb-3 line-clamp-2 italic font-serif">
                 {prayer.body}
               </p>
               <div className="flex gap-2">
                 {prayer.categories.map(c => (
-                  <span key={c} className="text-[10px] bg-white/5 px-2 py-0.5 rounded text-secondary/80">
+                  <span key={c} className="text-[10px] bg-surface-variant px-2 py-0.5 rounded text-secondary">
                     {c}
                   </span>
                 ))}

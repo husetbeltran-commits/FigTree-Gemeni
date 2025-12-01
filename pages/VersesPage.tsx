@@ -28,14 +28,14 @@ const VersesPage: React.FC = () => {
     <div className="min-h-screen bg-background animate-fade-in flex flex-col">
       <Header 
         title="Slumpa en vers" 
-        backButton={<Link to="/tools" className="text-secondary"><ChevronLeft /></Link>}
+        backButton={<Link to="/tools" className="text-secondary hover:text-primary"><ChevronLeft /></Link>}
       />
 
       <div className="flex-1 flex flex-col items-center justify-center p-6 text-center max-w-md mx-auto w-full">
         
         {!currentVerse ? (
           <div className="space-y-8 animate-fade-in">
-            <div className="w-24 h-24 bg-surface rounded-full flex items-center justify-center mx-auto text-accent mb-6 border border-white/5">
+            <div className="w-24 h-24 bg-surface rounded-full flex items-center justify-center mx-auto text-accent mb-6 border border-border shadow-sm">
               <RefreshCw size={40} />
             </div>
             <h2 className="text-2xl font-bold text-primary">Behöver du ett ord på vägen?</h2>
@@ -55,7 +55,7 @@ const VersesPage: React.FC = () => {
             <Quote size={32} className="text-accent/50 mx-auto" />
             
             <div className="space-y-4">
-              <h3 className="text-3xl font-serif font-medium leading-snug text-white">
+              <h3 className="text-3xl font-serif font-medium leading-snug text-primary">
                 "{currentVerse.text}"
               </h3>
               <p className="text-accent font-bold uppercase tracking-widest text-sm">
@@ -63,7 +63,7 @@ const VersesPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-surface/50 p-6 rounded-xl border border-white/5">
+            <div className="bg-surface/50 p-6 rounded-xl border border-border">
               <p className="text-secondary italic text-sm">
                 Reflektion: {currentReflection}
               </p>

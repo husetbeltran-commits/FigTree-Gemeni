@@ -33,7 +33,7 @@ const SongsPage: React.FC = () => {
           <input 
             type="text" 
             placeholder="Sök sång..." 
-            className="w-full bg-surface border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-accent"
+            className="w-full bg-surface border border-border rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-accent text-primary placeholder-secondary/50"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -43,7 +43,7 @@ const SongsPage: React.FC = () => {
         <div className="flex flex-wrap gap-2">
           <button 
             onClick={() => setSelectedCat(null)}
-            className={`px-3 py-1 rounded-full text-xs border transition-colors ${!selectedCat ? 'bg-accent border-accent text-white' : 'bg-transparent border-white/20 text-secondary'}`}
+            className={`px-3 py-1 rounded-full text-xs border transition-colors ${!selectedCat ? 'bg-accent border-accent text-white' : 'bg-transparent border-border text-secondary'}`}
           >
             Alla
           </button>
@@ -51,7 +51,7 @@ const SongsPage: React.FC = () => {
             <button
               key={cat}
               onClick={() => setSelectedCat(cat === selectedCat ? null : cat)}
-              className={`px-3 py-1 rounded-full text-xs border transition-colors ${cat === selectedCat ? 'bg-accent border-accent text-white' : 'bg-transparent border-white/20 text-secondary'}`}
+              className={`px-3 py-1 rounded-full text-xs border transition-colors ${cat === selectedCat ? 'bg-accent border-accent text-white' : 'bg-transparent border-border text-secondary'}`}
             >
               {cat}
             </button>
@@ -61,11 +61,11 @@ const SongsPage: React.FC = () => {
         {/* List */}
         <div className="grid gap-3">
           {filteredSongs.map(song => (
-            <Link key={song.id} to={`/songs/${song.id}`} className="bg-surface p-4 rounded-xl border border-white/5 hover:border-white/20 flex flex-col">
-              <h3 className="font-bold text-lg mb-1">{song.title}</h3>
+            <Link key={song.id} to={`/songs/${song.id}`} className="bg-surface p-4 rounded-xl border border-border hover:border-accent/30 flex flex-col transition-colors">
+              <h3 className="font-bold text-lg mb-1 text-primary">{song.title}</h3>
               <div className="flex gap-2">
                 {song.categories.map(c => (
-                  <span key={c} className="text-[10px] bg-white/5 px-2 py-0.5 rounded text-secondary">
+                  <span key={c} className="text-[10px] bg-surface-variant px-2 py-0.5 rounded text-secondary">
                     {c}
                   </span>
                 ))}

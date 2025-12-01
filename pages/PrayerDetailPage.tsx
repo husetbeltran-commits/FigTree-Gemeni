@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
 import { PRAYERS } from '../data/mockData';
-import { ChevronLeft, Play, Pause, Repeat, Music2 } from 'lucide-react';
+import { ChevronLeft, Play, Pause, Repeat, Music2, Volume2 } from 'lucide-react';
 
 const PrayerDetailPage: React.FC = () => {
   const { id } = useParams();
@@ -55,25 +55,25 @@ const PrayerDetailPage: React.FC = () => {
     else setRepeatMode('none');
   };
 
-  if (!prayer) return <div className="p-8 text-center">Bönen hittades inte.</div>;
+  if (!prayer) return <div className="p-8 text-center text-primary">Bönen hittades inte.</div>;
 
   return (
     <div className="min-h-screen bg-background animate-fade-in pb-20">
       <Header 
         title={prayer.title}
-        backButton={<Link to="/prayers" className="text-secondary hover:text-white transition-colors"><ChevronLeft /></Link>}
+        backButton={<Link to="/prayers" className="text-secondary hover:text-primary transition-colors"><ChevronLeft /></Link>}
       />
 
       {/* COMPLEMENTARY TOP PLAYER */}
       {/* Placerad högst upp för synlighet, men kompakt design för att inte ta fokus från bönen */}
       {hasTracks && currentTrack && (
-        <div className="bg-surface border-b border-white/5 relative z-10 shadow-sm sticky top-14">
+        <div className="bg-surface border-b border-border relative z-10 shadow-sm sticky top-14 transition-colors">
           <div className="max-w-2xl mx-auto px-4 py-3">
             <div className="flex items-center justify-between gap-4">
               
               {/* Vänster: Spårinfo */}
               <div className="flex items-center gap-3 overflow-hidden">
-                <div className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-accent shrink-0">
+                <div className="w-9 h-9 rounded-full bg-surface-variant flex items-center justify-center text-accent shrink-0 border border-border">
                   <Music2 size={18} />
                 </div>
                 <div className="min-w-0 flex flex-col justify-center">
@@ -116,7 +116,7 @@ const PrayerDetailPage: React.FC = () => {
 
             {/* Spellista (Visas bara om det finns fler spår) */}
             {prayer.tracks.length > 1 && (
-              <div className="mt-3 pt-2 border-t border-white/5 flex gap-2 overflow-x-auto no-scrollbar mask-gradient-right">
+              <div className="mt-3 pt-2 border-t border-border flex gap-2 overflow-x-auto no-scrollbar mask-gradient-right">
                 {prayer.tracks.map((track, idx) => (
                   <button
                     key={track.id}
@@ -127,7 +127,7 @@ const PrayerDetailPage: React.FC = () => {
                     className={`whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium transition-all flex items-center gap-2 border ${
                       currentTrackIndex === idx 
                         ? 'bg-accent/10 border-accent/30 text-accent' 
-                        : 'bg-transparent border-white/10 text-secondary hover:bg-white/5'
+                        : 'bg-transparent border-border text-secondary hover:bg-surface-variant'
                     }`}
                   >
                     <span>{idx + 1}. {track.title}</span>
@@ -151,8 +151,8 @@ const PrayerDetailPage: React.FC = () => {
 
       {/* TEXT CONTENT */}
       <div className="p-6 max-w-2xl mx-auto">
-        <div className="prose prose-invert prose-lg">
-          <p className="whitespace-pre-wrap font-serif text-xl leading-relaxed text-gray-100">
+        <div className="prose dark:prose-invert prose-lg prose-headings:text-primary prose-p:text-primary">
+          <p className="whitespace-pre-wrap font-serif text-xl leading-relaxed">
             {prayer.body}
           </p>
         </div>

@@ -1,30 +1,43 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import { SONGS, PRAYERS, ARTICLES, VERSES } from '../data/mockData';
-import { ArrowRight, Music, BookOpen, FileText, MessageCircle } from 'lucide-react';
+import { SONGS, PRAYERS, ARTICLES } from '../data/mockData';
+import { ArrowRight, Music, BookOpen, FileText, MessageCircle, RefreshCw, Sparkles } from 'lucide-react';
+import { getDailyVerse, getRandomVerse, getBookCategory, generateReflection } from '../utils/bibleHelpers';
+import { BibleVerse } from '../types';
 
 const HomePage: React.FC = () => {
-  // Get featured items
+  // --- Data Preparation ---
   const featuredSong = SONGS.find(s => s.featured);
   const featuredPrayer = PRAYERS.find(p => p.featured);
   const featuredArticle = ARTICLES.find(a => a.featured);
   
-  // Combine for "Utvalt" section
   const featuredItems = [
     { type: 'Sång', data: featuredSong, path: `/songs/${featuredSong?.id}`, image: featuredSong?.imageUrl },
     { type: 'Bön', data: featuredPrayer, path: `/prayers/${featuredPrayer?.id}`, image: featuredPrayer?.imageUrl },
     { type: 'Artikel', data: featuredArticle, path: `/articles/${featuredArticle?.id}`, image: featuredArticle?.mainImageUrl },
   ].filter(item => item.data);
 
-  // Daily Word
-  const dailyVerse = VERSES.find(v => v.isDailyWord) || VERSES[0];
-
-  // Latest Content logic
   const latestSong = [...SONGS].sort((a,b) => b.createdAt.localeCompare(a.createdAt))[0];
   const latestPrayer = [...PRAYERS].sort((a,b) => b.createdAt.localeCompare(a.createdAt))[0];
   const latestArticle = [...ARTICLES].sort((a,b) => b.createdAt.localeCompare(a.createdAt))[0];
+
+  // --- Dagens Ord State ---
+  // Initialize with the deterministic daily verse
+  const [currentVerse, setCurrentVerse] = useState<BibleVerse>(() => getDailyVerse());
+  const [reflection, setReflection] = useState<string>(() => generateReflection(getDailyVerse()));
+  const [isRandomizing, setIsRandomizing] = useState(false);
+
+  const handleRandomizeVerse = () => {
+    setIsRandomizing(true);
+    // Simulate a small delay for "AI thinking" or data fetching feel
+    setTimeout(() => {
+      const newVerse = getRandomVerse();
+      setCurrentVerse(newVerse);
+      setReflection(generateReflection(newVerse));
+      setIsRandomizing(false);
+    }, 400);
+  };
 
   return (
     <div className="animate-fade-in">
@@ -32,7 +45,7 @@ const HomePage: React.FC = () => {
       
       <div className="px-4 py-6 space-y-8">
         
-        {/* Utvalt Section - Redesigned with Image Cards */}
+        {/* Utvalt Section */}
         <section>
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-bold text-primary">Utvalt</h2>
@@ -42,7 +55,7 @@ const HomePage: React.FC = () => {
               <Link 
                 key={idx} 
                 to={item.path}
-                className="relative flex-shrink-0 w-72 h-44 rounded-2xl overflow-hidden border border-white/5 hover:border-accent/50 transition-all snap-center group shadow-md"
+                className="relative flex-shrink-0 w-72 h-44 rounded-2xl overflow-hidden border border-border hover:border-accent/50 transition-all snap-center group shadow-md"
               >
                 {/* Background Image with Gradient Overlay */}
                 {item.image ? (
@@ -52,7 +65,7 @@ const HomePage: React.FC = () => {
                       alt={item.data?.title} 
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   </>
                 ) : (
                   <div className="absolute inset-0 bg-surface bg-gradient-to-br from-surface to-accent/20" />
@@ -75,21 +88,63 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Dagens Ord */}
+        {/* Dagens Ord - New Interactive Card */}
         <section>
-          <h2 className="text-lg font-bold text-primary mb-3">Dagens ord</h2>
-          <div className="bg-surface relative overflow-hidden p-6 rounded-xl border border-white/5 shadow-sm">
-            <div className="absolute top-0 right-0 w-20 h-20 bg-accent/5 rounded-full -mr-10 -mt-10 blur-2xl"></div>
-            <p className="font-serif italic text-lg leading-relaxed mb-4 text-white relative z-10">
-              "{dailyVerse.text}"
-            </p>
-            <p className="text-sm font-bold text-accent text-right relative z-10">
-              {dailyVerse.reference}
-            </p>
+          <div className={`bg-surface relative overflow-hidden rounded-xl border border-border shadow-sm transition-all duration-500 ${isRandomizing ? 'opacity-80 scale-[0.99]' : 'opacity-100 scale-100'}`}>
+            
+            {/* Header / Title */}
+            <div className="p-5 pb-0">
+               <h2 className="text-lg font-bold text-primary mb-1">Dagens ord</h2>
+            </div>
+
+            {/* Content Container */}
+            <div className="p-6 pt-4 space-y-6">
+              
+              {/* Verse & Reference */}
+              <div>
+                <p className="font-serif italic text-lg leading-relaxed text-primary text-center mb-3">
+                  "{currentVerse.text}"
+                </p>
+                <div className="flex justify-end">
+                   <p className="text-sm font-bold text-accent">
+                     {currentVerse.reference}
+                   </p>
+                </div>
+              </div>
+
+              {/* Source Line */}
+              <div className="border-t border-border pt-4">
+                 <p className="text-[10px] font-bold text-secondary uppercase tracking-widest text-center">
+                   Vår vers kommer från: {getBookCategory(currentVerse.reference)}
+                 </p>
+              </div>
+
+              {/* Reflection */}
+              <div className="bg-surface-variant/50 p-4 rounded-lg border border-border/50">
+                 <div className="flex items-center gap-2 mb-2">
+                   <Sparkles size={12} className="text-accent" />
+                   <span className="text-xs font-bold text-primary">Reflektion</span>
+                 </div>
+                 <p className="text-sm text-secondary leading-relaxed">
+                   {reflection}
+                 </p>
+              </div>
+
+              {/* Action Button */}
+              <button 
+                onClick={handleRandomizeVerse}
+                disabled={isRandomizing}
+                className="w-full bg-accent hover:bg-accent-hover active:scale-[0.98] text-white font-bold py-3.5 px-4 rounded-full flex items-center justify-center gap-2 transition-all shadow-md"
+              >
+                <RefreshCw size={18} className={isRandomizing ? 'animate-spin' : ''} />
+                <span>Slumpa en vers</span>
+              </button>
+
+            </div>
           </div>
         </section>
 
-        {/* Senaste Innehåll - List with Thumbnails */}
+        {/* Senaste Innehåll */}
         <section>
           <h2 className="text-lg font-bold text-primary mb-3">Senaste innehåll</h2>
           <div className="space-y-3">
@@ -98,9 +153,9 @@ const HomePage: React.FC = () => {
               { label: 'Senaste bön', item: latestPrayer, path: `/prayers/${latestPrayer.id}`, image: latestPrayer.imageUrl },
               { label: 'Senaste sång', item: latestSong, path: `/songs/${latestSong.id}`, image: latestSong.imageUrl },
             ].map((row, idx) => (
-              <Link key={idx} to={row.path} className="flex items-center gap-3 bg-surface p-2.5 rounded-xl border border-white/5 hover:bg-white/5 transition-all group">
+              <Link key={idx} to={row.path} className="flex items-center gap-3 bg-surface p-2.5 rounded-xl border border-border hover:bg-hover transition-all group">
                 {/* Thumbnail */}
-                <div className="w-14 h-14 rounded-lg overflow-hidden shrink-0 bg-white/5 border border-white/5">
+                <div className="w-14 h-14 rounded-lg overflow-hidden shrink-0 bg-surface-variant border border-border">
                   {row.image ? (
                      <img src={row.image} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   ) : (
@@ -116,7 +171,7 @@ const HomePage: React.FC = () => {
                   <h4 className="font-medium text-primary truncate leading-tight">{row.item.title}</h4>
                 </div>
                 
-                <div className="pr-2 text-secondary group-hover:text-white transition-colors">
+                <div className="pr-2 text-secondary group-hover:text-primary transition-colors">
                   <ArrowRight size={16} />
                 </div>
               </Link>
@@ -128,7 +183,7 @@ const HomePage: React.FC = () => {
         <section>
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-lg font-bold text-primary">Verktyg</h2>
-            <Link to="/tools" className="text-xs text-accent font-medium hover:text-white transition-colors">Visa alla</Link>
+            <Link to="/tools" className="text-xs text-accent font-medium hover:text-primary transition-colors">Visa alla</Link>
           </div>
           <div className="grid grid-cols-2 gap-3">
             <ToolCard to="/songs" title="Sångbank" icon={Music} desc="Hitta sånger" />
@@ -144,11 +199,11 @@ const HomePage: React.FC = () => {
 
 // Internal Helper
 const ToolCard = ({ to, title, icon: Icon, desc }: { to: string, title: string, icon: any, desc: string }) => (
-  <Link to={to} className="bg-surface p-4 rounded-xl border border-white/5 flex flex-col items-start hover:bg-white/5 active:scale-[0.98] transition-all">
-    <div className="bg-white/5 p-2 rounded-lg mb-3 text-accent group-hover:text-white transition-colors">
+  <Link to={to} className="bg-surface p-4 rounded-xl border border-border flex flex-col items-start hover:bg-hover active:scale-[0.98] transition-all group">
+    <div className="bg-surface-variant p-2 rounded-lg mb-3 text-accent group-hover:text-primary transition-colors">
       <Icon size={20} />
     </div>
-    <h3 className="font-bold text-sm mb-1">{title}</h3>
+    <h3 className="font-bold text-sm mb-1 text-primary">{title}</h3>
     <p className="text-xs text-secondary">{desc}</p>
   </Link>
 );
