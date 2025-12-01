@@ -219,7 +219,7 @@ Han bjuder in dig till att lära känna honom, inte bara som en symbol, utan som
     tags: ['Teologi', 'Jesus', 'Vem är Jesus-serien'],
     createdAt: '2025-12-01',
     featured: false,
-    mainImageUrl: 'public/images/vem-ar-jesus.png'
+    mainImageUrl: 'images/vem-ar-jesus.png'
   }
 ];
 
