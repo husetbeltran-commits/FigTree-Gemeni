@@ -1,0 +1,5 @@
+{
+  "name": "FigTree",
+  "description": "A mobile-first, dark-mode web app for young Christians in Sweden, featuring songs, prayers, articles, and faith tools.",
+  "requestFramePermissions": []
+}
