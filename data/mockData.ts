@@ -1,6 +1,16 @@
 
 import { Song, Prayer, Article, BibleVerse } from '../types';
 
+import { Song, Prayer, Article, BibleVerse } from '../types';
+
+const IMAGE_BASE_PATH = (() => {
+  const base = import.meta.env.BASE_URL || '/';
+  return base.endsWith('/') ? base : `${base}/`;
+})();
+
+const VEM_AR_JESUS_IMAGE = `${IMAGE_BASE_PATH}images/vem-ar-jesus-v2.png`;
+const BIBELN_KALLA_IMAGE = `${IMAGE_BASE_PATH}images/bibeln-myt-eller-tillforlitlig-kalla.png`;
+
 export const SONGS: Song[] = [
   {
     id: '1',
@@ -219,7 +229,7 @@ Han bjuder in dig till att lära känna honom, inte bara som en symbol, utan som
     tags: ['Teologi', 'Jesus', 'Vem är Jesus-serien'],
     createdAt: '2025-12-01',
     featured: false,
-    mainImageUrl: '/public/images/vem-ar-jesus-v2.png'
+    mainImageUrl: VEM_AR_JESUS_IMAGE
   },
   {
   id: '4',
@@ -296,7 +306,7 @@ Bibeln säger:
   tags: ['Teologi', 'Bibeln', 'Vem är Jesus-serien'],
   createdAt: '2025-12-01',
   featured: false,
-  mainImageUrl: '/images/bibeln-myt-eller-tillforlitlig-kalla.png'
+  mainImageUrl: BIBELN_KALLA_IMAGE
 },
   
 ];
