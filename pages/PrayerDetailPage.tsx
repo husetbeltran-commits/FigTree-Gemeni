@@ -90,11 +90,6 @@ const PrayerDetailPage: React.FC = () => {
                     controls
                   />
                 )}
-                {isYouTubeTrack && (
-                  <div className="px-3 py-2 text-[12px] text-secondary bg-surface/60">
-                    Spelaren öppnas här när du väljer ett spår. Starta musiken via YouTube-spelarens egna kontroller.
-                  </div>
-                )}
               </div>
             )}
           </div>
