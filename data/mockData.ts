@@ -169,6 +169,93 @@ Värdig värdig värdig är Han som kommer igen`,
     createdAt: '2024-05-20T14:00:00Z',
     youtubeUrl: 'https://www.youtube.com/embed/yHwBwt4rYyQ?si=VC1s8rexMwad64t0',
     imageUrl: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=600&auto=format&fit=crop'
+  },
+  {
+    id: '6',
+    title: 'Var Mig Nådig Gud / Rena Mig Med Elden Från Din Ande / Jag Vill Bli Mer Lik Dig / O Det Dyra Jesu Blod',
+    lyrics: `Var mig nådig, Gud
+Var mig nådig, Gud
+Tvätta mig ren
+Gör mitt hjärta mjukt
+Var mig nådig, Gud
+
+Var mig nådig, Gud
+Var mig nådig, Gud
+Tvätta mig ren
+Gör mitt hjärta mjukt
+Var mig nådig, Gud
+
+Var mig nådig, Gud
+Var mig nådig, Gud
+Tvätta mig ren
+Gör mitt hjärta mjukt
+Var mig nådig, Gud
+
+Rena mig med elden från Din Ande
+Rena mig och gör mig mer lik Dig
+Låt mig dö från allt som är mitt eget i mitt liv
+Använd mig, Gud som du vill
+
+Rena mig med elden från Din Ande
+Rena mig och gör mig mer lik Dig
+Låt mig dö från allt som är mitt eget i mitt liv
+Använd mig, Gud som du vill
+
+Rena mig med elden från Din Ande
+Rena mig och gör mig mer lik Dig
+Låt mig dö från allt som är mitt eget i mitt liv
+Använd mig, Gud som du vill
+
+Använd mig, Gud som du vill
+Använd mig, Gud som du vill
+
+Jag, jag vill bli mer lik Dig
+Jesus, jag
+Jag vill bli mer lik Dig
+Jag vill va ett redskap i Din hand
+Jag, jag vill bli mer lik Dig
+
+Jag, jag vill bli mer lik Dig
+Jesus, jag
+Jag vill bli mer lik Dig
+Jag vill va ett redskap i Din hand
+Jag, jag vill bli mer lik Dig
+
+Jag, jag vill bli mer lik Dig
+Jesus, jag
+Jag vill bli mer lik Dig
+Jag vill va ett redskap i Din hand
+Jag, jag vill bli mer lik Dig
+
+Håll det dyra Jesu blod
+Håll det dyra Jesu blod
+Håll det dyra Jesu blod
+Som tvår mig vit som snö
+
+Håll det dyra Jesu blod
+Håll det dyra Jesu blod
+Håll det dyra Jesu blod
+Som tvår mig vit som snö
+
+Håll det dyra Jesu blod
+Håll det dyra Jesu blod
+Håll det dyra Jesu blod
+Som tvår mig vit som snö
+
+Håll det dyra Jesu blod
+Håll det dyra Jesu blod
+Håll det dyra Jesu blod
+Som tvår mig vit som snö
+
+Håll det dyra Jesu blod
+Håll det dyra Jesu blod
+Håll det dyra Jesu blod
+Som tvår mig vit som snö`,
+    categories: ['Lovsång', 'Andakt'],
+    tags: ['Omvändelse', 'Helgelse', 'Jesu blod'],
+    createdAt: '2024-07-15T10:30:00Z',
+    youtubeUrl: 'https://www.youtube.com/embed/zFD3zqxWWTQ?si=ac-ITTeYVbrznWur',
+    imageUrl: 'https://images.unsplash.com/photo-1495985835785-2c08f62c1e1c?q=80&w=600&auto=format&fit=crop'
   }
 ];
 
