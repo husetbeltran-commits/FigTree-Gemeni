@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
 import { PRAYERS } from '../data/mockData';
-import { ChevronLeft, Play, Pause, Repeat, Music2 } from 'lucide-react';
+import { ChevronLeft, Play, Pause, Repeat, Music2, Youtube } from 'lucide-react';
 import { isYouTubeEmbedUrl } from '../utils/mediaHelpers';
 
 const PrayerDetailPage: React.FC = () => {
@@ -19,7 +19,12 @@ const PrayerDetailPage: React.FC = () => {
   const currentTrack = hasTracks ? prayer?.tracks[currentTrackIndex] : null;
   const trackUrl = currentTrack?.audioUrl;
   const isYouTubeTrack = trackUrl ? isYouTubeEmbedUrl(trackUrl) : false;
-  const playPauseDisabled = isYouTubeTrack;
+
+  const getYouTubeEmbedWithAutoplay = (url: string, autoplay: boolean) => {
+    const sanitizedUrl = url.replace(/([&?])autoplay=\d/, '').replace(/\?$/, '');
+    const separator = sanitizedUrl.includes('?') ? '&' : '?';
+    return `${sanitizedUrl}${separator}autoplay=${autoplay ? 1 : 0}`;
+  };
 
   useEffect(() => {
     if (!audioRef.current || isYouTubeTrack || !trackUrl) return;
@@ -37,6 +42,12 @@ const PrayerDetailPage: React.FC = () => {
       audioRef.current.currentTime = 0;
     }
   }, [isYouTubeTrack]);
+
+  useEffect(() => {
+    if (isYouTubeTrack) {
+      setIsPlaying(false);
+    }
+  }, [currentTrackIndex, isYouTubeTrack]);
 
   const handleTrackEnd = () => {
     if (!hasTracks || !prayer) return;
@@ -80,63 +91,49 @@ const PrayerDetailPage: React.FC = () => {
       {/* COMPLEMENTARY TOP PLAYER */}
       {/* Placerad högst upp för synlighet, men kompakt design för att inte ta fokus från bönen */}
       {hasTracks && currentTrack && (
-        <div className="bg-surface border-b border-border relative z-10 shadow-sm sticky top-14 transition-colors">
-          <div className="max-w-2xl mx-auto px-4 py-3">
-            <div className="flex items-center justify-between gap-4">
-              
-              {/* Vänster: Spårinfo */}
-              <div className="flex items-center gap-3 overflow-hidden">
-                <div className="w-9 h-9 rounded-full bg-surface-variant flex items-center justify-center text-accent shrink-0 border border-border">
-                  <Music2 size={18} />
-                </div>
-                <div className="min-w-0 flex flex-col justify-center">
-                  <span className="text-[10px] text-accent font-bold uppercase tracking-wider leading-none mb-1">
-                    Ljudmiljö
-                  </span>
-                  <span className="text-sm font-medium text-primary truncate leading-none">
-                    {currentTrack.title}
-                  </span>
-                </div>
+        <div className="bg-surface border-b border-border relative z-10 shadow-sm transition-colors">
+          <div className="max-w-2xl mx-auto px-4 py-4 space-y-3">
+            <div className="text-[11px] font-semibold tracking-[0.12em] uppercase text-secondary">Ljudmiljö</div>
+
+            <div className="flex items-center gap-3 rounded-xl bg-surface-variant/60 border border-border px-3 py-2.5 shadow-sm">
+              <div className="w-10 h-10 rounded-lg bg-surface text-accent border border-border flex items-center justify-center shrink-0">
+                {isYouTubeTrack ? <Youtube size={20} /> : <Music2 size={18} />}
               </div>
-
-              {/* Höger: Kontroller */}
-              <div className="flex items-center gap-3 shrink-0">
-                 {/* Repeat Button */}
-                 <button 
-                    onClick={toggleRepeat}
-                    className={`p-2 transition-colors relative ${repeatMode !== 'none' ? 'text-accent' : 'text-secondary/50 hover:text-secondary'}`}
-                    title="Repetera"
-                  >
-                    <Repeat size={18} />
-                    {repeatMode === 'one' && (
-                      <span className="absolute top-1 right-0.5 text-[8px] font-bold">1</span>
-                    )}
-                  </button>
-
-                 {/* Play/Pause Button */}
-                 <button
-                  onClick={() => {
-                    if (playPauseDisabled) return;
-                    setIsPlaying(!isPlaying);
-                  }}
-                  disabled={playPauseDisabled}
-                  className={`bg-accent hover:bg-accent-hover text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-transform active:scale-95 ${
-                    playPauseDisabled ? 'opacity-50 cursor-not-allowed hover:bg-accent' : ''
+              <div className="flex-1 min-w-0">
+                <p className="text-[11px] text-secondary uppercase tracking-wide leading-none mb-1">Nu spelas</p>
+                <p className="text-sm font-medium text-primary truncate leading-tight">{currentTrack.title}</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={toggleRepeat}
+                  className={`p-2 rounded-full transition-colors relative border border-transparent hover:border-border ${
+                    repeatMode !== 'none' ? 'text-accent bg-accent/10' : 'text-secondary hover:text-primary'
                   }`}
-                  title={playPauseDisabled ? 'Kontrollera uppspelning via YouTube-spelaren' : 'Spela/Pausa'}
+                  title="Repetera"
+                >
+                  <Repeat size={18} />
+                  {repeatMode === 'one' && (
+                    <span className="absolute top-1 right-1 text-[8px] font-bold">1</span>
+                  )}
+                </button>
+                <button
+                  onClick={() => setIsPlaying(!isPlaying)}
+                  className={`w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-transform active:scale-95 text-white ${
+                    isPlaying ? 'bg-accent' : 'bg-primary'
+                  }`}
+                  title={isPlaying ? 'Pausa' : 'Spela upp'}
                 >
                   {isPlaying ? (
                     <Pause size={18} fill="currentColor" />
                   ) : (
                     <Play size={18} fill="currentColor" className="ml-0.5" />
                   )}
-                 </button>
+                </button>
               </div>
             </div>
 
-            {/* Spellista (Visas bara om det finns fler spår) */}
             {prayer.tracks.length > 1 && (
-              <div className="mt-3 pt-2 border-t border-border flex gap-2 overflow-x-auto no-scrollbar mask-gradient-right">
+              <div className="flex gap-2 overflow-x-auto no-scrollbar mask-gradient-right pb-1">
                 {prayer.tracks.map((track, idx) => (
                   <button
                     key={track.id}
@@ -147,8 +144,8 @@ const PrayerDetailPage: React.FC = () => {
                       setIsPlaying(!isYouTubeSelection);
                     }}
                     className={`whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium transition-all flex items-center gap-2 border ${
-                      currentTrackIndex === idx 
-                        ? 'bg-accent/10 border-accent/30 text-accent' 
+                      currentTrackIndex === idx
+                        ? 'bg-accent/10 border-accent/30 text-accent'
                         : 'bg-transparent border-border text-secondary hover:bg-surface-variant'
                     }`}
                   >
@@ -160,26 +157,34 @@ const PrayerDetailPage: React.FC = () => {
                 ))}
               </div>
             )}
-            
-            {/* Media Elements */}
-            {isYouTubeTrack ? (
-              <div className="mt-4">
+
+            <div className="rounded-lg border border-border bg-surface-variant/40 overflow-hidden">
+              {isYouTubeTrack ? (
                 <iframe
-                  src={trackUrl}
+                  key={`${currentTrack.id}-${isPlaying}`}
+                  src={getYouTubeEmbedWithAutoplay(trackUrl!, isPlaying)}
                   width="100%"
-                  height="200"
+                  height="120"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen={false}
                   referrerPolicy="no-referrer-when-downgrade"
+                  className="block"
                 />
-              </div>
-            ) : (
-              <audio
-                ref={audioRef}
-                src={trackUrl}
-                onEnded={handleTrackEnd}
-              />
-            )}
+              ) : (
+                <audio
+                  ref={audioRef}
+                  src={trackUrl}
+                  onEnded={handleTrackEnd}
+                  className="w-full"
+                  controls
+                />
+              )}
+              {isYouTubeTrack && (
+                <div className="px-3 py-2 text-[12px] text-secondary bg-surface/60">
+                  Starta eller pausa från knappen ovan eller spelaren här – videon hålls kompakt så att bönen är i fokus.
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
