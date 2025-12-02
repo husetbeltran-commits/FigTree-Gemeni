@@ -46,7 +46,23 @@ export const normalizeAudioUrl = (url?: string): string | undefined => {
 
   const searchParams = new URLSearchParams(parsed.searchParams);
   searchParams.delete('v');
+  searchParams.set('playsinline', '1');
+  searchParams.set('rel', '0');
+
   const suffix = searchParams.toString();
 
   return `https://www.youtube.com/embed/${videoId}${suffix ? `?${suffix}` : ''}`;
+};
+
+export const buildYouTubeEmbedSrc = (
+  url?: string,
+  { autoplay = false }: { autoplay?: boolean } = {}
+): string | undefined => {
+  const normalized = normalizeAudioUrl(url);
+  if (!normalized || !isYouTubeUrl(normalized)) return normalized;
+
+  const separator = normalized.includes('?') ? '&' : '?';
+  const autoplaySuffix = `${separator}autoplay=${autoplay ? '1' : '0'}`;
+
+  return `${normalized}${autoplaySuffix}`;
 };

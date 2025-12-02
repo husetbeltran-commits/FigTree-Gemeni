@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
 import { PRAYERS } from '../data/mockData';
 import { ChevronLeft, Play, Pause, Repeat, Music2 } from 'lucide-react';
-import { isYouTubeUrl, normalizeAudioUrl } from '../utils/mediaHelpers';
+import { buildYouTubeEmbedSrc, isYouTubeUrl, normalizeAudioUrl } from '../utils/mediaHelpers';
 
 const PrayerDetailPage: React.FC = () => {
   const { id } = useParams();
@@ -20,6 +20,10 @@ const PrayerDetailPage: React.FC = () => {
   const isYouTubeTrack = currentTrack?.audioUrl ? isYouTubeUrl(currentTrack.audioUrl) : false;
   const normalizedTrackUrl = currentTrack?.audioUrl
     ? normalizeAudioUrl(currentTrack.audioUrl)
+    : undefined;
+
+  const youtubeEmbedSrc = isYouTubeTrack && isPlaying
+    ? buildYouTubeEmbedSrc(currentTrack?.audioUrl, { autoplay: true })
     : undefined;
 
   useEffect(() => {
@@ -148,13 +152,15 @@ const PrayerDetailPage: React.FC = () => {
             
             {/* Hidden Media Elements */}
             {isYouTubeTrack ? (
-              isPlaying && normalizedTrackUrl ? (
+              youtubeEmbedSrc ? (
                 <iframe
-                  key={currentTrack.id}
-                  src={`${normalizedTrackUrl}${normalizedTrackUrl.includes('?') ? '&' : '?'}autoplay=1`}
-                  className="hidden"
+                  key={`${currentTrack.id}-${isPlaying ? 'play' : 'pause'}`}
+                  src={youtubeEmbedSrc}
+                  className="absolute w-px h-px opacity-0 pointer-events-none"
                   title={currentTrack.title}
-                  allow="autoplay; encrypted-media"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                 />
               ) : null
             ) : (
