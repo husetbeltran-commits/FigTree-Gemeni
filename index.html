@@ -83,10 +83,16 @@
       }
 
       /* Reflection animation */
-      .animated-reflection {
+      .animated-reflection.reflection-visible {
         opacity: 0;
         transform: translateY(8px);
         animation: reflectionFadeUp 300ms ease-out forwards;
+      }
+
+      .animated-reflection.reflection-hidden {
+        opacity: 1;
+        transform: translateY(0);
+        animation: reflectionFadeOut 200ms ease-out forwards;
       }
 
       @keyframes reflectionFadeUp {
@@ -97,6 +103,17 @@
         to {
           opacity: 1;
           transform: translateY(0);
+        }
+      }
+
+      @keyframes reflectionFadeOut {
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(4px);
         }
       }
     </style>

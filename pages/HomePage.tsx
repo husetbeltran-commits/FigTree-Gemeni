@@ -30,6 +30,7 @@ const HomePage: React.FC = () => {
   const [animatedReference, setAnimatedReference] = useState<string | null>(null);
   const [animatedText, setAnimatedText] = useState<string | null>(null);
   const [reflectionAnimationKey, setReflectionAnimationKey] = useState(0);
+  const [isReflectionVisible, setIsReflectionVisible] = useState(true);
 
   const scrambleIntervalRef = useRef<number | null>(null);
 
@@ -50,6 +51,7 @@ const HomePage: React.FC = () => {
     if (isRandomizing) return;
 
     setIsRandomizing(true);
+    setIsReflectionVisible(false);
     const nextVerse = getRandomVerse();
 
     if (scrambleIntervalRef.current) {
@@ -71,8 +73,9 @@ const HomePage: React.FC = () => {
       setAnimatedText(null);
       setCurrentVerse(nextVerse);
       setReflection(generateReflection(nextVerse));
-      setReflectionAnimationKey((prev) => prev + 1);
       setIsRandomizing(false);
+      setIsReflectionVisible(true);
+      setReflectionAnimationKey((prev) => prev + 1);
     }, 700);
   };
 
@@ -167,7 +170,7 @@ const HomePage: React.FC = () => {
               {/* Reflection */}
               <div
                 key={reflectionAnimationKey}
-                className="bg-surface-variant/50 p-4 rounded-lg border border-border/50 animated-reflection"
+                className={`bg-surface-variant/50 p-4 rounded-lg border border-border/50 animated-reflection ${isReflectionVisible ? 'reflection-visible' : 'reflection-hidden'}`}
               >
                  <div className="flex items-center gap-2 mb-2">
                    <Sparkles size={12} className="text-accent" />
