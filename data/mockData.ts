@@ -72,20 +72,36 @@ i tusen år och evigheten lång.`,
   },
   {
     id: '3',
-    title: 'Hörnsten',
-    lyrics: `Mitt hopp är byggt på Kristus
-Hans blod och Hans rättfärdighet
-Jag vågar inte tro på nåt annat
-Än Jesu namn och helighet
+    title: 'Jag vill ge dig o Herre min lovsång',
+    lyrics: `[Vers 1]
+Jag vill ge dig o Herre min lovsång
+Jag vill tacka med skönaste ord
+för din kärlek och nåd som är gränslös
+Jag vill tacka för allt gott Du gjort
 
-Kristus är min fasta grund
-En klippa i en orolig stund
-Allt annat är som sand
-Allt annat är som sand`,
+[Refräng]
+Jag vill göra mitt liv till en lovsång till dig
+Där var ton skall en hyllning till dig bära
+och i dagar av glädje och dagar av sorg
+Vill jag leva var dag
+till din ära
+
+[Vers 2]
+Ingen annan är värld att besjungas
+endast Du, Herre äger min sång
+och i himmelens gyllene salar
+skall jag prisa dig evighet lång
+
+[Vers 3]
+Och om sången nån gång skulle tystna
+eller störas av oro och strid
+herre öppna på nytt mina ögon
+så jag ser att hos dig är min frid`,
     categories: ['Lovsång', 'Ungdomsmöte'],
     tags: ['Hillsong', 'Tillit'],
     createdAt: '2023-08-20T18:15:00Z',
     pinned: true,
+    youtubeUrl: 'https://www.youtube.com/embed/dwDlpO7TTwI?si=G_06CzeVzWn5g_AE" title="YouTube video player'
     imageUrl: 'https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?q=80&w=600&auto=format&fit=crop' // Stone/Texture
   }
 ];
