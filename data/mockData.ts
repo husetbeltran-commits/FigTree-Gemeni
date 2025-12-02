@@ -751,5 +751,145 @@ export const VERSES: BibleVerse[] = [
     text: 'Kasta din börda på Herren, han skall uppehålla dig. Han skall aldrig tillåta den rättfärdige att vackla.',
     reflection:
       'Du behöver inte bära allt själv längre. Gud tar emot det du lägger i hans hand. Låt honom lyfta av dig det som tynger ditt hjärta just nu.'
+  },
+  {
+    id: '21',
+    reference: 'Jesaja 55:7',
+    text: 'Den ogudaktige må överge sin väg och den orättfärdige sina tankar. Han må vända om till Herren, så skall han förbarma sig över honom.',
+    reflection:
+      'Du får alltid en väg tillbaka, oavsett hur din vandring sett ut. När du överger det som skadar dig och vänder dig mot Gud, möter han dig med ömhet och förlåtelse.'
+  },
+  {
+    id: '22',
+    reference: 'Jakobs brev 4:8',
+    text: 'Närma er Gud, så skall han närma sig er. Gör era händer rena, ni syndare, och rena era hjärtan, ni tvehågsna.',
+    reflection:
+      'Du får komma nära Gud precis som du är. När du gör det, renar han dig steg för steg och fyller dig med ny kraft för att leva annorlunda.'
+  },
+  {
+    id: '23',
+    reference: 'Romarbrevet 12:2',
+    text: 'Anpassa er inte efter den här världen, utan låt er förvandlas genom förnyelsen av ert sinne.',
+    reflection:
+      'Du behöver inte följa strömmen. Gud ger dig förmågan att tänka nytt, välja nytt och leva med riktning och klarhet.'
+  },
+  {
+    id: '24',
+    reference: 'Psaltaren 32:1',
+    text: 'Salig är den som fått sin överträdelse förlåten, sin synd övertäckt.',
+    reflection:
+      'Du kan andas ut. Förlåtelsen är verklig, och du behöver inte bära gamla bördor längre. Gud täcker det som varit och gör dig fri.'
+  },
+  {
+    id: '25',
+    reference: 'Första Johannesbrevet 1:9',
+    text: 'Om vi bekänner våra synder är han trofast och rättfärdig, så att han förlåter oss synderna och renar oss från all orättfärdighet.',
+    reflection:
+      'Du behöver aldrig tveka att komma till Gud. Han möter dig inte med skam, utan med rening och en nystart.'
+  },
+  {
+    id: '26',
+    reference: 'Ordspråksboken 28:13',
+    text: 'Den som döljer sina överträdelser går det illa, men den som bekänner och överger dem finner barmhärtighet.',
+    reflection:
+      'Du blir inte fri genom att dölja det som gör ont — du blir fri genom att komma till Gud med det. Han tar emot dig och leder dig vidare.'
+  },
+  {
+    id: '27',
+    reference: 'Johannes 8:12',
+    text: 'Jag är världens ljus. Den som följer mig skall inte vandra i mörkret utan ha livets ljus.',
+    reflection:
+      'Du behöver inte famla i mörkret. När du följer Jesus får du riktning, klarhet och ett ljus som aldrig slocknar.'
+  },
+  {
+    id: '28',
+    reference: 'Efesierbrevet 4:22–24',
+    text: 'Lägg av den gamla människan… och ikläd er den nya som är skapad till likhet med Gud.',
+    reflection:
+      'Du är inte fast i gamla mönster. Gud hjälper dig att lämna det som håller dig tillbaka och klä dig i ett nytt sätt att leva.'
+  },
+  {
+    id: '29',
+    reference: 'Psaltaren 51:12',
+    text: 'Skapa i mig ett rent hjärta, Gud, och ge mig på nytt en frimodig ande.',
+    reflection:
+      'Gud kan förnya dig på djupet, även där du känner dig som svagast. Be honom att göra ditt hjärta rent och din ande stark igen.'
+  },
+  {
+    id: '30',
+    reference: 'Titusbrevet 2:11–12',
+    text: 'Guds nåd… fostrar oss till att säga nej till ogudaktighet och världsliga begär.',
+    reflection:
+      'Du är inte ensam i kampen mot det som drar dig bort från Gud. Hans nåd lär dig steg för steg att leva ett renare liv.'
+  },
+  {
+    id: '31',
+    reference: 'Hebreerbrevet 12:1',
+    text: 'Låt oss lägga bort allt som tynger och särskilt synden som snärjer oss.',
+    reflection:
+      'Du får släppa taget om det som binder dig. Gud ger dig mod att lämna allt som kväver glädjen och hindrar din vandring.'
+  },
+  {
+    id: '32',
+    reference: 'Andra Timoteusbrevet 1:7',
+    text: 'Gud har inte gett oss en ande av fruktan, utan av kraft, kärlek och självbehärskning.',
+    reflection:
+      'Du behöver inte styras av rädsla eller av gamla mönster. Du har fått kraft att stå stadigt och välja det som bygger upp.'
+  },
+  {
+    id: '33',
+    reference: 'Matteusevangeliet 5:8',
+    text: 'Saliga är de renhjärtade, för de skall se Gud.',
+    reflection:
+      'Du får sträva efter ett rent hjärta — inte perfekt, men äkta. Gud möter dig när du söker honom med uppriktighet.'
+  },
+  {
+    id: '34',
+    reference: 'Romarbrevet 6:14',
+    text: 'Synden skall inte vara herre över er, för ni står inte under lagen utan under nåden.',
+    reflection:
+      'Du behöver inte vara slav under gamla vanor. Guds nåd ger dig kraft att leva fritt och nytt.'
+  },
+  {
+    id: '35',
+    reference: 'Första Petrusbrevet 1:16',
+    text: 'Var heliga, för jag är helig.',
+    reflection:
+      'Du får växa i helighet, steg för steg. Gud kallar dig inte till perfektion, utan till gemenskap med honom — och där förändras du.'
+  },
+  {
+    id: '36',
+    reference: 'Galaterbrevet 5:16',
+    text: 'Vandra i Anden, så kommer ni inte göra vad köttet begär.',
+    reflection:
+      'Du kan ta beslut i vardagen med Andens hjälp. När du går med Gud, faller många frestelser bort av sig själva.'
+  },
+  {
+    id: '37',
+    reference: 'Psaltaren 119:11',
+    text: 'Jag gömmer ditt ord i mitt hjärta för att inte synda mot dig.',
+    reflection:
+      'Du får fylla ditt hjärta med Guds ord. Det stärker dig, ger vishet och leder dig när du står inför val.'
+  },
+  {
+    id: '38',
+    reference: 'Johannes 15:3',
+    text: 'Ni är redan rena genom det ord som jag har talat till er.',
+    reflection:
+      'Gud renar dig inte genom prestation, utan genom sitt ord och sin närvaro. Du är redan påbörjad i något nytt.'
+  },
+  {
+    id: '39',
+    reference: 'Josua 1:9',
+    text: 'Var stark och frimodig… ty Herren, din Gud, är med dig vart du än går.',
+    reflection:
+      'Du kan gå modigt även in i förändringar. Gud är med dig i varje steg, varje beslut, varje omstart.'
+  },
+  {
+    id: '40',
+    reference: 'Romarbrevet 13:12',
+    text: 'Låt oss lägga av mörkrets gärningar och ikläda oss ljusets vapenrustning.',
+    reflection:
+      'Du får kliva ut ur det som hör mörkret till och ta på dig det som hör ljuset till. Gud ger dig rustning, klarhet och kraft att leva annorlunda.'
   }
 ];
