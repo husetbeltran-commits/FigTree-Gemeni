@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header';
 import { PRAYERS } from '../data/mockData';
-import { ChevronLeft, ChevronDown, ChevronUp, Music2, Youtube } from 'lucide-react';
+import { ChevronLeft, Music2, Youtube } from 'lucide-react';
 import { isYouTubeEmbedUrl } from '../utils/mediaHelpers';
 
 const PrayerDetailPage: React.FC = () => {
@@ -34,8 +34,8 @@ const PrayerDetailPage: React.FC = () => {
           <div className="max-w-2xl mx-auto px-4 py-4 space-y-3">
             <div className="flex items-center justify-between gap-3">
               <div>
-                <div className="text-[11px] font-semibold tracking-[0.12em] uppercase text-secondary">Bakgrundsmusik</div>
-                <p className="text-sm text-primary/90">Välj ett spår och öppna spelaren för att spela via YouTube.</p>
+                <div className="text-[11px] font-semibold tracking-[0.12em] uppercase text-secondary">BAKGRUNDSMUSIK</div>
+                <p className="text-sm text-primary/90">Tryck på en låt för att öppna spelaren. Tryck igen för att gömma den.</p>
               </div>
               <div className="w-10 h-10 rounded-lg bg-surface text-accent border border-border flex items-center justify-center shrink-0">
                 {isYouTubeTrack ? <Youtube size={20} /> : <Music2 size={18} />}
@@ -67,19 +67,11 @@ const PrayerDetailPage: React.FC = () => {
               </div>
             )}
 
-            <div className="flex items-center justify-between bg-surface-variant/50 border border-border rounded-lg px-3 py-2">
-              <div className="text-sm font-medium text-primary truncate">{currentTrack.title}</div>
-              <button
-                onClick={() => setIsPlayerOpen(prev => !prev)}
-                className="flex items-center gap-1 text-xs font-semibold text-primary hover:text-accent transition-colors"
-              >
-                {isPlayerOpen ? 'Dölj spelare' : 'Visa spelare'}
-                {isPlayerOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-              </button>
-            </div>
-
             {isPlayerOpen && (
               <div className="rounded-lg border border-border bg-surface-variant/40 overflow-hidden">
+                <div className="px-3 py-2 bg-surface border-b border-border text-sm font-medium text-primary truncate">
+                  {currentTrack.title}
+                </div>
                 {isYouTubeTrack ? (
                   <iframe
                     key={currentTrack.id}
