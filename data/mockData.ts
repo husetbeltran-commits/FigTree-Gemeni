@@ -34,7 +34,7 @@ O store Gud, o store Gud!`,
     tags: ['Klassisk', 'Natur'],
     createdAt: '2023-01-01T08:30:00Z',
     featured: true,
-    youtubeUrl: 'https://youtu.be/cX932ceIRKQ?si=Qik0UzSuE_Y-hx8V', // Placeholder
+    youtubeUrl: 'https://www.youtube.com/embed/cX932ceIRKQ?si=0HoywA4cr-pCL8Sz', // Placeholder
     imageUrl: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=600&auto=format&fit=crop' // Nature/Forest
   },
   {
