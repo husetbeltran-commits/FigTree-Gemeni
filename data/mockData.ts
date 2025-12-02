@@ -103,6 +103,41 @@ så jag ser att hos dig är min frid`,
     pinned: true,
     youtubeUrl: 'https://www.youtube.com/embed/dwDlpO7TTwI?si=G_06CzeVzWn5g_AE" title="YouTube video player',
     imageUrl: 'https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?q=80&w=600&auto=format&fit=crop' // Stone/Texture
+  },
+  {
+    id: '4',
+    title: 'Mer helighet giv mig',
+    lyrics: `1. Mer helighet giv mig,
+mer mildhet, o Gud,
+mer sorg över synden,
+mer lust för ditt bud,
+mer tjänande kärlek,
+som ej söker lön,
+mer tro på min Jesus,
+mer kraft i min bön.
+
+2. Mer tacksamhet giv mig,
+mer saktmodigt sinn´,
+mer iver att söka
+din ära, ej min,
+mer smärta med Jesus,
+mer fröjd av hans tröst,
+mer styrka att lida,
+mer frid vid hans bröst.
+
+3. Mer tålamod giv mig,
+mer salighetshopp
+att frigjord från världen
+mot målet se opp.
+Mer uthållig gör mig,
+på frukter mer rik,
+mer redo för himlen,
+mer, Jesus, dig lik.`,
+    categories: ['Hymn', 'Andakt'],
+    tags: ['Helgelse', 'Kristuslikhet', 'Hängivenhet'],
+    createdAt: '2023-10-10T09:00:00Z',
+    youtubeUrl: 'https://www.youtube.com/embed/J3Q08XIpG-o?si=q2DqKj4u0ZgTOkz1',
+    imageUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=600&auto=format&fit=crop'
   }
 ];
 
