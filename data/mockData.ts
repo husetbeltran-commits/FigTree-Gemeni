@@ -33,7 +33,6 @@ O store Gud, o store Gud!`,
     categories: ['Lovsång', 'Hymn'],
     tags: ['Klassisk', 'Natur'],
     createdAt: '2023-01-01T08:30:00Z',
-    featured: true,
     youtubeUrl: 'https://www.youtube.com/embed/cX932ceIRKQ?si=0HoywA4cr-pCL8Sz', // Placeholder
     imageUrl: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=600&auto=format&fit=crop' // Nature/Forest
   },
@@ -100,6 +99,7 @@ så jag ser att hos dig är min frid`,
     categories: ['Lovsång', 'Ungdomsmöte'],
     tags: ['Hillsong', 'Tillit'],
     createdAt: '2023-08-20T18:15:00Z',
+    featured: true,
     pinned: true,
     youtubeUrl: 'https://www.youtube.com/embed/dwDlpO7TTwI?si=G_06CzeVzWn5g_AE" title="YouTube video player',
     imageUrl: 'https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?q=80&w=600&auto=format&fit=crop' // Stone/Texture
