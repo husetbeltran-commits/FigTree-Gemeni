@@ -67,7 +67,7 @@ i tusen år och evigheten lång.`,
     categories: ['Lovsång', 'Modern'],
     tags: ['Matt Redman', 'Översättning'],
     createdAt: '2023-05-15T12:00:00Z',
-    youtubeUrl: 'https://www.youtube.com/embed/1_z-NSe5ohQ?si=PlEUm7RtSvOWJhdF'
+    youtubeUrl: 'https://www.youtube.com/embed/1_z-NSe5ohQ?si=PlEUm7RtSvOWJhdF',
     imageUrl: 'https://images.unsplash.com/photo-1495616811223-4d98c6e9d869?q=80&w=600&auto=format&fit=crop' // Sunrise/Sky
   },
   {
@@ -101,7 +101,7 @@ så jag ser att hos dig är min frid`,
     tags: ['Hillsong', 'Tillit'],
     createdAt: '2023-08-20T18:15:00Z',
     pinned: true,
-    youtubeUrl: 'https://www.youtube.com/embed/dwDlpO7TTwI?si=G_06CzeVzWn5g_AE" title="YouTube video player'
+    youtubeUrl: 'https://www.youtube.com/embed/dwDlpO7TTwI?si=G_06CzeVzWn5g_AE" title="YouTube video player',
     imageUrl: 'https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?q=80&w=600&auto=format&fit=crop' // Stone/Texture
   }
 ];
