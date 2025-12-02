@@ -177,9 +177,7 @@ export const ARTICLES: Article[] = [
   {
     id: '1',
     title: 'Vad innebär det att tro?',
-    body: `## Vad innebär det att tro?
-
-Vi hör ofta ordet ”tro” – i kyrkan, i skolan, på sociala medier. Men vad betyder det egentligen att tro? Är det bara en känsla? En idé? Eller är det något som faktiskt kan förändra hur vi tänker, känner och lever?
+    body: `Vi hör ofta ordet ”tro” – i kyrkan, i skolan, på sociala medier. Men vad betyder det egentligen att tro? Är det bara en känsla? En idé? Eller är det något som faktiskt kan förändra hur vi tänker, känner och lever?
 
 ## Tro påverkar oss – på riktigt
 
