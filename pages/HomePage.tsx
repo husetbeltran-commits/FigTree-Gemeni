@@ -148,21 +148,24 @@ const HomePage: React.FC = () => {
           <h2 className="text-lg font-bold text-primary mb-3">Senaste innehåll</h2>
           <div className="space-y-3">
             {[
-              { label: 'Senaste artikel', item: latestArticle, path: `/articles/${latestArticle.id}`, image: latestArticle.mainImageUrl },
-              { label: 'Senaste bön', item: latestPrayer, path: `/prayers/${latestPrayer.id}`, image: latestPrayer.imageUrl },
-              { label: 'Senaste sång', item: latestSong, path: `/songs/${latestSong.id}`, image: latestSong.imageUrl },
-            ].map((row, idx) => (
-              <Link key={idx} to={row.path} className="flex items-center gap-3 bg-surface p-2.5 rounded-xl border border-border hover:bg-hover transition-all group">
-                {/* Thumbnail */}
-                <div className="w-14 h-14 rounded-lg overflow-hidden shrink-0 bg-surface-variant border border-border">
-                  {row.image ? (
-                     <img src={row.image} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              { label: 'Senaste artikel', item: latestArticle, path: `/articles/${latestArticle.id}` },
+              { label: 'Senaste bön', item: latestPrayer, path: `/prayers/${latestPrayer.id}` },
+              { label: 'Senaste sång', item: latestSong, path: `/songs/${latestSong.id}` },
+            ].map((row, idx) => {
+              const image = (row.item as any).imageUrl ?? (row.item as any).mainImageUrl;
+
+              return (
+                <Link key={idx} to={row.path} className="flex items-center gap-3 bg-surface p-2.5 rounded-xl border border-border hover:bg-hover transition-all group">
+                  {/* Thumbnail */}
+                  <div className="w-14 h-14 rounded-lg overflow-hidden shrink-0 bg-surface-variant border border-border">
+                  {image ? (
+                     <img src={image} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-secondary">
                       <FileText size={20} />
                     </div>
                   )}
-                </div>
+                  </div>
                 
                 {/* Text */}
                 <div className="flex-1 min-w-0">
@@ -173,8 +176,9 @@ const HomePage: React.FC = () => {
                 <div className="pr-2 text-secondary group-hover:text-primary transition-colors">
                   <ArrowRight size={16} />
                 </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </section>
 
