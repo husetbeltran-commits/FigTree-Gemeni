@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ARTICLES } from '../data/mockData';
 import { ChevronLeft, Share2, Calendar } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import { formatDisplayDate } from '../utils/dateHelpers';
 
 const ArticleDetailPage: React.FC = () => {
   const { id } = useParams();
@@ -47,7 +48,7 @@ const ArticleDetailPage: React.FC = () => {
           
           <div className="flex items-center gap-2 text-secondary text-xs mb-8">
             <Calendar size={12} />
-            <span>{article.createdAt}</span>
+            <span>{formatDisplayDate(article.createdAt)}</span>
           </div>
 
           <div className="prose prose-lg dark:prose-invert max-w-none">

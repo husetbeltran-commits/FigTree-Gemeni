@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import { ARTICLES } from '../data/mockData';
 import { ChevronLeft, Search, Pin } from 'lucide-react';
+import { compareByCreatedAtDesc } from '../utils/dateHelpers';
 
 const ArticlesPage: React.FC = () => {
   const [search, setSearch] = useState('');
@@ -11,7 +12,7 @@ const ArticlesPage: React.FC = () => {
   const sortedArticles = [...ARTICLES].sort((a, b) => {
     if (a.pinned && !b.pinned) return -1;
     if (!a.pinned && b.pinned) return 1;
-    return b.createdAt.localeCompare(a.createdAt);
+    return compareByCreatedAtDesc(a, b);
   });
 
   const filtered = sortedArticles.filter(a => 
