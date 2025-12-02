@@ -1,11 +1,13 @@
 
+export type ISODateTimeString = string;
+
 export interface Song {
   id: string;
   title: string;
   lyrics: string;
   categories: string[];
   tags: string[];
-  createdAt: string;
+  createdAt: ISODateTimeString;
   featured?: boolean;
   pinned?: boolean;
   youtubeUrl?: string;
@@ -27,7 +29,7 @@ export interface Prayer {
   body: string;
   categories: string[];
   tags: string[];
-  createdAt: string;
+  createdAt: ISODateTimeString;
   featured?: boolean;
   tracks: AudioTrack[];
   imageUrl?: string;
@@ -39,7 +41,7 @@ export interface Article {
   body: string;
   categories: string[];
   tags: string[];
-  createdAt: string;
+  createdAt: ISODateTimeString;
   featured?: boolean;
   pinned?: boolean;
   mainImageUrl?: string;
@@ -57,5 +59,5 @@ export interface ChatMessage {
   id: string;
   sender: 'user' | 'ai';
   text: string;
-  createdAt: string;
+  createdAt: ISODateTimeString;
 }

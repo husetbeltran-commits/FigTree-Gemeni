@@ -5,6 +5,7 @@ import { SONGS, PRAYERS, ARTICLES } from '../data/mockData';
 import { ArrowRight, Music, BookOpen, FileText, MessageCircle, RefreshCw, Sparkles } from 'lucide-react';
 import { getDailyVerse, getRandomVerse, getBookCategory, generateReflection } from '../utils/bibleHelpers';
 import { BibleVerse } from '../types';
+import { getOrderedContent } from '../utils/dateHelpers';
 
 const HomePage: React.FC = () => {
   // --- Data Preparation ---
@@ -18,9 +19,7 @@ const HomePage: React.FC = () => {
     { type: 'Artikel', data: featuredArticle, path: `/articles/${featuredArticle?.id}`, image: featuredArticle?.mainImageUrl },
   ].filter(item => item.data);
 
-  const latestSong = [...SONGS].sort((a,b) => b.createdAt.localeCompare(a.createdAt))[0];
-  const latestPrayer = [...PRAYERS].sort((a,b) => b.createdAt.localeCompare(a.createdAt))[0];
-  const latestArticle = [...ARTICLES].sort((a,b) => b.createdAt.localeCompare(a.createdAt))[0];
+  const { latestSong, latestPrayer, latestArticle } = getOrderedContent(ARTICLES, PRAYERS, SONGS);
 
   // --- Dagens Ord State ---
   // Initialize with the deterministic daily verse

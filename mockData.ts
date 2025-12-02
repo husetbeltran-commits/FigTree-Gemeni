@@ -23,7 +23,7 @@ Då brister själen ut i lovsångs ljud:
 O store Gud, o store Gud!`,
     categories: ['Lovsång', 'Hymn'],
     tags: ['Klassisk', 'Natur'],
-    createdAt: '2023-01-01',
+    createdAt: '2023-01-01T08:30:00Z',
     featured: true,
     youtubeUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder
     imageUrl: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=600&auto=format&fit=crop' // Nature/Forest
@@ -44,7 +44,7 @@ Vad som än händer och vad som än väntar
 Låt mig få sjunga när kvällen når sitt slut`,
     categories: ['Lovsång', 'Modern'],
     tags: ['Matt Redman', 'Översättning'],
-    createdAt: '2023-05-15',
+    createdAt: '2023-05-15T12:00:00Z',
     imageUrl: 'https://images.unsplash.com/photo-1495616811223-4d98c6e9d869?q=80&w=600&auto=format&fit=crop' // Sunrise/Sky
   },
   {
@@ -61,7 +61,7 @@ Allt annat är som sand
 Allt annat är som sand`,
     categories: ['Lovsång', 'Ungdomsmöte'],
     tags: ['Hillsong', 'Tillit'],
-    createdAt: '2023-08-20',
+    createdAt: '2023-08-20T18:15:00Z',
     pinned: true,
     imageUrl: 'https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?q=80&w=600&auto=format&fit=crop' // Stone/Texture
   }
@@ -89,7 +89,7 @@ och fullkomligt lycklig tillsammans med dig i evigheten.
 Amen.`,
     categories: ['Dagliga böner', 'Bön vid oro'],
     tags: ['Klassisk', 'Trygghet'],
-    createdAt: '2023-02-10',
+    createdAt: '2023-02-10T07:45:00Z',
     featured: true,
     tracks: [
       { id: 't1', title: 'Stillhet (Piano)', audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
@@ -109,7 +109,7 @@ Låt mig vila i din frid.
 I Jesu namn, Amen.`,
     categories: ['Dagliga böner', 'Tyst stund'],
     tags: ['Kväll', 'Vila'],
-    createdAt: '2023-09-01',
+    createdAt: '2023-09-01T21:10:00Z',
     tracks: [],
     imageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop' // Sunset/Calm
   },
@@ -126,7 +126,7 @@ Du är här, just nu.
 Jag vilar i dig. Amen.`,
     categories: ['Bön vid oro', 'Andningsbön'],
     tags: ['Psykisk hälsa', 'Tröst'],
-    createdAt: '2023-11-05',
+    createdAt: '2023-11-05T10:05:00Z',
     tracks: [
        { id: 't3', title: 'Lugnande atmosfär', audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3' }
     ],
@@ -150,7 +150,7 @@ Många tror att tvivel är motsatsen till tro, men ofta är tvivel en del av tro
 Tron är heller inte något vi bär ensamma. Vi är skapade för gemenskap, att vara en del av en kropp. Kyrkan är inte en byggnad, utan vi människor tillsammans.`,
     categories: ['Evangeliet', 'Livet med Gud'],
     tags: ['Grunder', 'Intro'],
-    createdAt: '2023-10-12',
+    createdAt: '2023-10-12T14:00:00Z',
     featured: true,
     pinned: true,
     mainImageUrl: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=600&auto=format&fit=crop' // Open book/Light
@@ -165,7 +165,7 @@ Jesus säger: "Kom till mig, alla ni som arbetar och bär på tunga bördor, så
 Detta är inte en uppmaning till passivitet, utan till en inre hållning. Att vila i Gud är att veta att vårt värde inte ligger i vad vi gör, utan i vem vi är – Guds älskade barn.`,
     categories: ['Livet med Gud', 'Hopp'],
     tags: ['Stress', 'Vila'],
-    createdAt: '2023-12-01',
+    createdAt: '2023-12-01T09:00:00Z',
     mainImageUrl: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=600&auto=format&fit=crop' // Coffee/Relax
   },
   {
@@ -211,7 +211,7 @@ Han bjuder in dig till att lära känna honom, inte bara som en symbol, utan som
 > Jesus, om du är den du säger att du är – visa dig för mig. Jag är öppen. Hjälp mig tro, även när jag tvivlar. Amen.`,
     categories: ['Evangeliet', 'Identitet i Kristus'],
     tags: ['Teologi', 'Jesus', 'Vem är Jesus-serien'],
-    createdAt: '2025-12-01',
+    createdAt: '2025-12-15T08:00:00Z',
     featured: false,
     mainImageUrl: '/images/vem-ar-jesus-v2.png' // Correct path
   },
