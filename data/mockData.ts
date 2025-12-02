@@ -333,7 +333,8 @@ Jag vilar i dig. Amen.`,
     tags: ['Psykisk hälsa', 'Tröst'],
     createdAt: '2023-11-05T10:05:00Z',
     tracks: [
-       { id: 't3', title: 'Lugnande atmosfär', audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3' }
+      { id: 't1', title: 'Oceans', audioUrl: 'https://www.youtube.com/embed/eLqTZ07ja7g?si=J6s9zt6y_5G5OVdl' },
+      { id: 't2', title: 'You Say', audioUrl: 'https://www.youtube.com/embed/ihrUIPfvTh8?si=S2rT4hnD32bfBxgn' }
     ],
     imageUrl: 'https://images.unsplash.com/photo-1504194921103-f8b80cadd5e4?q=80&w=600&auto=format&fit=crop' // Abstract/Light
   }
