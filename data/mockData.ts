@@ -39,21 +39,35 @@ O store Gud, o store Gud!`,
   },
   {
     id: '2',
-    title: 'Tio tusen skäl',
-    lyrics: `Sjung min själ till Herren
-Sjung min själ
-Sjung ut Hans heliga namn
-Sjung som aldrig förr
-Sjung min själ
-Sjung ut Hans heliga namn
+    title: 'Tio tusen skäl/Lova Herren min själ',
+    lyrics: `1. Vid dagens början när solen stiger,
+ger jag min sång till Dig min Gud.
+Vad än som mig sker och vad än som ligger framför,
+låt sången ljuda stark vid dagens slut.
 
-Solen går upp, det är en ny dag
-Det är dags att sjunga igen
-Vad som än händer och vad som än väntar
-Låt mig få sjunga när kvällen når sitt slut`,
+Lova Herren min själ, o min själ
+tillbe den Helige.
+Sjung som aldrig förut, o min själ.
+Jag tillber den Helige.
+
+2. Så rik på nåd och så sen till vrede.
+Så mild och god är Du Gud mot mig.
+Om all Din kärlek vill jag sjunga evigt.
+Du ger mig tusen skäl att prisa Dig.
+
+Lova Herren min själ, o min själ
+tillbe den Helige.
+Sjung som aldrig förut, o min själ.
+Jag tillber den Helige.
+
+3. Och på den dag då min kraft flyr undan,
+när slutet nalkas för mig en gång.
+Då stiger mitt lov och min själ ska sjunga,
+i tusen år och evigheten lång.`,
     categories: ['Lovsång', 'Modern'],
     tags: ['Matt Redman', 'Översättning'],
     createdAt: '2023-05-15T12:00:00Z',
+    youtubeUrl: 'https://www.youtube.com/embed/1_z-NSe5ohQ?si=PlEUm7RtSvOWJhdF'
     imageUrl: 'https://images.unsplash.com/photo-1495616811223-4d98c6e9d869?q=80&w=600&auto=format&fit=crop' // Sunrise/Sky
   },
   {
