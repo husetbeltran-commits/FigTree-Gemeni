@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import { Music, BookOpen, FileText, MessageCircle, RefreshCw, ChevronLeft } from 'lucide-react';
+import { Music, BookOpen, FileText, Sparkles, RefreshCw, ChevronLeft } from 'lucide-react';
 
 const ToolsPage: React.FC = () => {
   const tools = [
@@ -18,16 +18,16 @@ const ToolsPage: React.FC = () => {
       path: '/prayers' 
     },
     { 
-      title: 'Artiklar', 
-      desc: 'Läs texter om tro och livet med Kristus.', 
-      icon: FileText, 
-      path: '/articles' 
+      title: 'Artiklar',
+      desc: 'Läs texter om tro och livet med Kristus.',
+      icon: FileText,
+      path: '/articles'
     },
-    { 
-      title: 'Ställ en fråga om tro', 
-      desc: 'Ställ frågor om Bibeln och kristen tro.', 
-      icon: MessageCircle, 
-      path: '/chat' 
+    {
+      title: 'Ställ en fråga om tro',
+      desc: 'Ställ frågor om Bibeln och kristen tro.',
+      icon: Sparkles,
+      path: '/chat'
     },
     { 
       title: 'Slumpa en vers', 

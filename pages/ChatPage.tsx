@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import { ChevronLeft, Send, Sparkles } from 'lucide-react';
+import { ChevronLeft, Clock, Send, Sparkles } from 'lucide-react';
 import { ChatMessage } from '../types';
 
 const ChatPage: React.FC = () => {
@@ -55,18 +55,42 @@ const ChatPage: React.FC = () => {
 
   return (
     <div className="flex flex-col h-screen bg-background animate-fade-in">
-      <Header 
-        title="Fråga om tro" 
+      <Header
+        title="Fråga om tro"
         backButton={<Link to="/tools" className="text-secondary hover:text-primary"><ChevronLeft /></Link>}
       />
 
       {/* Chat Area */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages.map((msg) => (
+        {messages.length > 0 && (
+          <div className="flex justify-start">
+            <div className="max-w-[85%] rounded-2xl p-4 shadow-sm bg-surface border border-border text-primary rounded-bl-none">
+              <div className="flex items-center gap-1 mb-2 text-accent text-xs font-bold uppercase tracking-wider">
+                <Sparkles size={12} />
+                <span>FigTree Guide</span>
+              </div>
+              <p className="text-sm leading-relaxed">{messages[0].text}</p>
+            </div>
+          </div>
+        )}
+
+        <div className="flex justify-start">
+          <div className="max-w-[85%] bg-surface border border-border text-primary rounded-2xl p-4 shadow-sm rounded-bl-none">
+            <div className="flex items-center gap-2 mb-2 text-accent text-xs font-bold uppercase tracking-wider">
+              <Clock size={12} />
+              <span>KOMMER SNART</span>
+            </div>
+            <p className="text-sm leading-relaxed text-secondary">
+              Den här funktionen är inte riktigt igång ännu. Snart kommer du kunna ställa frågor om Bibeln, Jesus och kristen tro direkt här i appen — på ett tryggt och respektfullt sätt.
+            </p>
+          </div>
+        </div>
+
+        {messages.slice(1).map((msg) => (
           <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div className={`max-w-[85%] rounded-2xl p-4 shadow-sm ${
-              msg.sender === 'user' 
-                ? 'bg-accent text-white rounded-br-none' 
+              msg.sender === 'user'
+                ? 'bg-accent text-white rounded-br-none'
                 : 'bg-surface border border-border text-primary rounded-bl-none'
             }`}>
               {msg.sender === 'ai' && (
@@ -95,22 +119,27 @@ const ChatPage: React.FC = () => {
 
       {/* Input Area */}
       <div className="fixed bottom-[64px] left-0 right-0 bg-background border-t border-border p-3 transition-colors">
-        <div className="flex items-center gap-2 max-w-3xl mx-auto">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-            placeholder="Skriv din fråga här..."
-            className="flex-1 bg-surface text-primary placeholder-secondary/50 border border-border rounded-full px-4 py-3 focus:outline-none focus:ring-1 focus:ring-accent transition-colors"
-          />
-          <button 
-            onClick={handleSend}
-            disabled={!input.trim() || isLoading}
-            className="bg-accent disabled:bg-surface disabled:text-secondary text-white p-3 rounded-full hover:bg-accent-hover transition-colors shadow-md"
-          >
-            <Send size={20} />
-          </button>
+        <div className="flex flex-col gap-2 max-w-3xl mx-auto">
+          <div className="flex items-center gap-2">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+              placeholder="Skriv din fråga här..."
+              className="flex-1 bg-surface text-primary placeholder-secondary/50 border border-border rounded-full px-4 py-3 focus:outline-none focus:ring-1 focus:ring-accent transition-colors"
+            />
+            <button
+              onClick={handleSend}
+              disabled={!input.trim() || isLoading}
+              className="bg-accent disabled:bg-surface disabled:text-secondary text-white p-3 rounded-full hover:bg-accent-hover transition-colors shadow-md"
+            >
+              <Send size={20} />
+            </button>
+          </div>
+          <p className="text-[11px] text-secondary text-center">
+            Frågefunktionen håller på att utvecklas och är inte aktiv ännu.
+          </p>
         </div>
       </div>
     </div>

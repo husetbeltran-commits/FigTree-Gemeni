@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import { SONGS, PRAYERS, ARTICLES } from '../data/mockData';
-import { ArrowRight, Music, BookOpen, FileText, MessageCircle, RefreshCw, Sparkles } from 'lucide-react';
+import { ArrowRight, Music, BookOpen, FileText, RefreshCw, Sparkles } from 'lucide-react';
 import { getDailyVerse, getRandomVerse, getBookCategory, generateReflection } from '../utils/bibleHelpers';
 import { BibleVerse } from '../types';
 import { getOrderedContent } from '../utils/dateHelpers';
@@ -244,7 +244,7 @@ const HomePage: React.FC = () => {
             <ToolCard to="/songs" title="Sångbank" icon={Music} desc="Hitta sånger" />
             <ToolCard to="/prayers" title="Bön" icon={BookOpen} desc="Meditationer" />
             <ToolCard to="/articles" title="Artiklar" icon={FileText} desc="Läs om tro" />
-            <ToolCard to="/chat" title="Fråga om tro" icon={MessageCircle} desc="AI-guide" />
+            <ToolCard to="/chat" title="Fråga om tro" icon={Sparkles} desc="AI-guide" />
           </div>
         </section>
       </div>
