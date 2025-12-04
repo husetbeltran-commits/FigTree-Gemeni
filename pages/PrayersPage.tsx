@@ -60,6 +60,9 @@ const PrayersPage: React.FC = () => {
           {filtered.map(prayer => (
             <Link key={prayer.id} to={`/prayers/${prayer.id}`} className="bg-surface p-5 rounded-xl border border-border hover:border-accent/30 transition-colors">
               <h3 className="font-bold text-lg mb-2 text-primary">{prayer.title}</h3>
+              {prayer.subtitle && (
+                <p className="text-xs text-secondary mb-2 leading-snug">{prayer.subtitle}</p>
+              )}
               <p className="text-sm text-secondary mb-3 line-clamp-2 italic font-serif">
                 {prayer.body}
               </p>

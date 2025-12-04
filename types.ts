@@ -27,6 +27,7 @@ export interface AudioTrack {
 export interface Prayer {
   id: string;
   title: string;
+  subtitle?: string;
   body: string;
   categories: string[];
   tags: string[];

@@ -341,9 +341,9 @@ Jag vilar i dig. Amen.`,
   {
     id: '4',
     title: 'Bön att tala välsignelser över ditt liv',
-    body: `Käre Herre,  
- jag kommer inför dig med ett hjärta fyllt av tacksamhet och lovsång.  
- Jag prisar ditt heliga namn,  
+    body: `Käre Herre,
+ jag kommer inför dig med ett hjärta fyllt av tacksamhet och lovsång.
+ Jag prisar ditt heliga namn,
  för du är Skaparen av allt.
 
 Du talade universum till existens  
@@ -389,6 +389,145 @@ Amen.`,
       { id: 't3', title: 'Baptize Me With Fire', audioUrl: 'https://www.youtube.com/embed/DjVSEFIc_yA?si=K365xKQh9XO1MKPS' }
     ],
     imageUrl: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=600&auto=format&fit=crop' // Light rays/hopeful
+  },
+  {
+    id: '5',
+    title: 'Mitt hjärta i stormen',
+    subtitle: 'En omskriven och förenklad version av Psalm 31 (SFB15), skapad för att hjälpa dig att be när natten känns tung och tankarna rusar.',
+    body: `2  
+Till dig, Herre, kommer jag för skydd.  
+Låt mig aldrig hamna i skam.  
+Rädda mig med din godhet och sanning.  
+
+3  
+Lyssna på mig, Herre.  
+Kom snabbt och hjälp mig!  
+Var min trygga plats,  
+mitt starka försvar.  
+
+4  
+För du är min klippa och min trygghet.  
+Led mig och visa vägen  
+för ditt namns skull.  
+
+5  
+Befria mig ur fällorna  
+som andra lagt för mig,  
+för du är min beskyddare.  
+
+6  
+I dina händer lämnar jag mitt liv.  
+Du har köpt mig fri, Herre,  
+du trofaste Gud.  
+
+7  
+Jag avskyr det som är tomt och falskt,  
+jag litar på Herren.  
+
+8  
+Jag vill glädjas  
+över din kärlek.  
+Du ser min smärta  
+och du vet hur jag mår när allt är svårt.  
+
+9  
+Du låter mig inte falla  
+i fienders händer.  
+Du ger mig plats att andas.  
+
+10  
+Var nära mig, Herre, jag är i nöd.  
+Sorgen sliter på mig,  
+på insidan och utsidan.  
+
+11  
+Mitt liv känns fullt av sorg,  
+mina år av suckar.  
+Jag tappar kraft  
+på grund av min synd,  
+min kropp orkar inte mer.  
+
+12  
+På grund av mina fiender  
+har jag blivit en skam för människor.  
+De som känner mig blir rädda  
+och undviker mig.  
+
+13  
+Det är som om jag är bortglömd,  
+som om jag inte längre finns.  
+Som ett trasigt kärl  
+man slängt bort.  
+
+14  
+Jag hör vad andra viskar,  
+oro överallt.  
+De går ihop mot mig  
+och planerar ont.  
+
+15  
+Men jag litar på dig, Herre.  
+Jag säger: ”Du är min Gud.”  
+
+16  
+Min tid är i dina händer.  
+Rädda mig från dem som vill mig illa.  
+
+17  
+Låt ditt ansikte lysa över mig.  
+Rädda mig med din kärlek.  
+
+18  
+Herre, låt mig inte stå där och skämmas  
+när jag ropar till dig.  
+Låt de som gör det onda stå för sina handlingar  
+och tystna.  
+
+19  
+Tysta lögnarnas ord,  
+de som talar stolta och hårda ord  
+mot den som vill leva rätt.  
+
+20  
+Så stor är din godhet,  
+den du sparar åt dem som älskar dig  
+och visar inför människor  
+mot dem som flyr till dig!  
+
+21  
+Du skyddar dem nära dig  
+från människors intriger.  
+Du tar dem i din trygghet  
+bort från elaka ord.  
+
+22  
+Herren är värd att prisas!  
+Han har visat mig sin kärlek  
+även när allt känns som en stad i kring och under attack.  
+
+23  
+Jag säger i min ångest:  
+”Jag är avskuren från dina ögon.”  
+Men du hörde min bön om nåd  
+när jag ropade till dig.  
+
+24  
+Älska Herren,  
+alla ni som följer honom!  
+Herren tar hand om dem som är honom trogna,  
+men den som är högmodig  
+får ta konsekvenserna.  
+
+25  
+Var starka och modiga i era hjärtan,  
+alla ni som hoppas på Herren!`,
+    categories: ['02–04 på natten', 'I stormen', 'Motarbetad och bortglömd'],
+    tags: ['Nattbön', 'Storm', 'Psalm 31'],
+    createdAt: '2025-02-15T02:30:00Z',
+    tracks: [
+      { id: 't1', title: 'Mitt hjärta i stormen – reflektion', audioUrl: 'https://www.youtube.com/embed/oQMJBz5bcbg?si=mGSd6pPQTL4sQhDB' }
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1501975558162-0be7b8c5d2ff?q=80&w=1200&auto=format&fit=crop'
   }
 ];
 

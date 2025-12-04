@@ -27,6 +27,12 @@ const PrayerDetailPage: React.FC = () => {
         backButton={<Link to="/prayers" className="text-secondary hover:text-primary transition-colors"><ChevronLeft /></Link>}
       />
 
+      {prayer.subtitle && (
+        <div className="px-6 pt-4 pb-2 max-w-2xl mx-auto text-secondary text-sm leading-relaxed">
+          {prayer.subtitle}
+        </div>
+      )}
+
       {/* COMPLEMENTARY TOP PLAYER */}
       {/* Placerad högst upp för synlighet, men kompakt design för att inte ta fokus från bönen */}
       {hasTracks && currentTrack && (
