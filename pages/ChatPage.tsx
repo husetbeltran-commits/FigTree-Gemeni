@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import { ChevronLeft, Clock, Send, Sparkles } from 'lucide-react';
+import { Clock, Menu, MoreHorizontal, Send, Sparkles, Volume2 } from 'lucide-react';
 import { ChatMessage } from '../types';
 
 const ChatPage: React.FC = () => {
@@ -55,10 +53,37 @@ const ChatPage: React.FC = () => {
 
   return (
     <div className="flex flex-col h-screen bg-background animate-fade-in">
-      <Header
-        title="Fråga om tro"
-        backButton={<Link to="/tools" className="text-secondary hover:text-primary"><ChevronLeft /></Link>}
-      />
+      <div className="sticky top-0 z-50">
+        <div className="h-14 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 text-primary shadow-sm">
+          <div className="flex items-center justify-between h-full px-3">
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-global-nav'))}
+              aria-label="Öppna meny"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-white/40 text-primary backdrop-blur border border-white/50 shadow-sm active:scale-95 transition"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                aria-label="Röstläge"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/40 text-primary backdrop-blur border border-white/50 shadow-sm active:scale-95 transition"
+              >
+                <Volume2 className="w-5 h-5" />
+              </button>
+              <button
+                type="button"
+                aria-label="Fler alternativ"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/40 text-primary backdrop-blur border border-white/50 shadow-sm active:scale-95 transition"
+              >
+                <MoreHorizontal className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Chat Area */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
