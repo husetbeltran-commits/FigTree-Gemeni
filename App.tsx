@@ -11,7 +11,6 @@ import PrayersPage from './pages/PrayersPage';
 import PrayerDetailPage from './pages/PrayerDetailPage';
 import ArticlesPage from './pages/ArticlesPage';
 import ArticleDetailPage from './pages/ArticleDetailPage';
-import ChatPage from './pages/ChatPage';
 import VersesPage from './pages/VersesPage';
 import { ThemeProvider } from './contexts/ThemeContext';
 
@@ -36,7 +35,6 @@ const App: React.FC = () => {
           <Route path="/songs/:id" element={<SongDetailPage />} />
           <Route path="/prayers/:id" element={<PrayerDetailPage />} />
           <Route path="/articles/:id" element={<ArticleDetailPage />} />
-          <Route path="/chat" element={<ChatPage />} />
           <Route path="/verses" element={<VersesPage />} />
 
         </Routes>

@@ -312,7 +312,6 @@ const HomePage: React.FC = () => {
             <ToolCard to="/songs" title="Sångbank" icon={Music} desc="Hitta sånger" />
             <ToolCard to="/prayers" title="Bön" icon={BookOpen} desc="Meditationer" />
             <ToolCard to="/articles" title="Artiklar" icon={FileText} desc="Läs om tro" />
-            <ToolCard to="/chat" title="Fråga om tro" icon={Sparkles} desc="AI-guide" />
           </div>
         </section>
       </div>

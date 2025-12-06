@@ -58,9 +58,3 @@ export interface BibleVerse {
   reflection?: string;
 }
 
-export interface ChatMessage {
-  id: string;
-  sender: 'user' | 'ai';
-  text: string;
-  createdAt: ISODateTimeString;
-}
