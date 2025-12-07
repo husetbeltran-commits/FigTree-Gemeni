@@ -8,6 +8,7 @@ const IMAGE_BASE_PATH = (() => {
 
 const VEM_AR_JESUS_IMAGE = `${IMAGE_BASE_PATH}images/vem-ar-jesus-v2.png`;
 const BIBELN_KALLA_IMAGE = `${IMAGE_BASE_PATH}images/bibeln-myt-eller-tillforlitlig-kalla.png`;
+const TALA_VALSIGNELSER_STA_FAST_IMAGE = `${IMAGE_BASE_PATH}images/tala-valsignelser-sta-fast.png`;
 
 export const SONGS: Song[] = [
   {
@@ -535,34 +536,33 @@ export const BLESSINGS: Blessing[] = [
   {
     id: 'b1',
     title: 'Stå fast med Guds styrka',
-    body: `# **Stå fast med Guds styrka**
-
-## **Syfte**
+    body: `### **Syfte**
 Att stärka dig mentalt och andligt så du kan stå fast, hitta inre stabilitet och återta fokus och frid mitt i press och stress.
 
-## **Instruktion**
+### **Instruktion**
 Läs texten nedan noga. Den har kraft att bygga upp dig och ge dig styrka.
 Låt orden forma ditt hjärta och påminna dig om vem Gud är — och vem du är i Kristus.
 
 ---
 
-## **1. Starta med att rusta dig med Bibelns mentala ”svärd”**
+### **1. Starta med att rusta dig med Bibelns mentala ”svärd”**
 *Läs dessa verser långsamt och låt dem sjunka in i dig:*
 
-### **Psalm 144:1–2**
+**Psalm 144:1–2**  
 *”Lovad vare Herren, min klippa, som lär mina händer att strida och mina armar att kämpa.
 Gud är min nåd och min borg, mitt fasta värn och min räddare, min sköld; honom tar jag min tillflykt till.”*
 
-### **Jesaja 41:10**
+**Jesaja 41:10**  
 *”Frukta inte, för jag är med dig, var inte förskräckt, för jag är din Gud.
 Jag styrker dig, jag hjälper dig, jag uppehåller dig med min rättfärdighets högra hand.”*
 
-### **Efesierbrevet 1:19–20**
-*”Vad mäktig hans styrka är för oss som tror — samma kraft som han med sin makt lät verka i Kristus när han uppväckte honom från de döda och satte honom på sin högra sida i himlen.”*
+**Efesierbrevet 1:19–20**  
+*”Vad mäktig hans styrka är för oss som tror — samma kraft som han med sin makt lät verka i Kristus när han uppväckte honom från
+de döda och satte honom på sin högra sida i himlen.”*
 
 ---
 
-## **2. Din andliga verklighet**
+### **2. Din andliga verklighet**
 **Läs detta högt för dig själv:**
 
 * Jag är buren av Guds klippa som aldrig vacklar.
@@ -573,26 +573,27 @@ Jag styrker dig, jag hjälper dig, jag uppehåller dig med min rättfärdighets 
 
 ---
 
-## **3. Visualisera – se det framför dig**
+### **3. Visualisera – se det framför dig**
 Föreställ dig att du går genom en vanlig dag: skola, jobb, gruppchattar, tunnelbanans brus.
 Trycket i bröstet, oron, stressen och modlösheten vill komma krypande.
 
-Du stannar.
+Du stannar.  
 Under dina fötter känner du något fast, orubbligt och tryggt.
 
-**Det är klippan.**
+**Det är klippan.**  
 **Det är Gud.**
 
-Bredvid dig står Kristus…  
+Bredvid dig står Kristus, han som vandrar med dig — *”Jag är med er alla dagar till tidens slut” (Matt 28:20).*  
 Han lägger sin hand på din axel och säger:  
-*“Jag tränar ditt inre. Jag ger dig frid mitt i allt.”*
+*”Jag tränar ditt inre. Jag ger dig frid mitt i allt.”*
 
-Ljuset från honom fyller dig med ro.  
-Du vet att du står tryggt. Du vet att du inte går ensam.
+Ljuset från honom fyller dig och ger dig ro.  
+Du vet att du står tryggt.  
+Du vet att du inte går ensam.
 
 ---
 
-## **4. Omprogrammera dig och förändra din situation**
+### **4. Omprogrammera dig och förändra din situation**
 **Läs med beslutsamhet — detta är Guds välsignelse över ditt liv:**
 
 Herre, min klippa, jag talar ut att min styrka kommer från dig.  
@@ -604,22 +605,33 @@ När oro knackar — du är min sköld.
 När stress pressar — du är min borg.  
 När jag är svag — du är min styrka.
 
-Jesus, min Herre, låt ditt ord vara mitt svärd, din närvaro min trygghet och ditt hjärta min vila.
+Jesus, min Herre, låt ditt ord vara mitt svärd, din närvaro min trygghet och ditt hjärta min vila.  
+Du är min tillflykt, min styrka och min seger.
 
 Du ska överraska mig med dina välsignelser.  
 Jag vandrar i dina välsignelser.
 
-Du tar min kamp.  
-Du öppnar havet framför mig.  
-Du för mig igenom.
+Jag behöver inte kämpa som andra, för du tar min kamp.  
+Du tränar mina armar till hårt arbete, men det är du som låter allt mitt arbete få gott resultat.
 
-Jag är redo, Herre — för dagen, för natten, för vandringen.  
+Havet reser sig framför mig och fienden jagar min själ, men du stoppar fienden och skyddar mig.  
+Du klyver havet mitt itu och låter mig passera igenom i trygghet.
+
+Du är mitt enda hopp.  
+Du är min kraft.  
+Jag ska lita på dig.  
+Du är min styrka.  
+Du är mitt allt.
+
+Jag är redo, Herre.  
+Jag är redo för dagen nu, jag är redo för natten nu.  
+Jag är redo att fortsätta vandra, för min själ har fått se dig.  
 Amen.
 
 ---
 
-## **5. Bygg dig själv – tala liv till din själ**
-*Läs dessa högt för dig själv tills du tror dem:*
+### **5. Bygg dig själv – tala liv till din själ**
+*Läs dessa högt för dig själv tills du tror dem och kan vila i att de är sanna för dig:*
 
 * Herren tränar mitt hjärta att stå fast och min själ att vila i hans frid.
 * Guds kraft verkar i mig — samma kraft som uppväckte Jesus från de döda.
@@ -631,31 +643,34 @@ Amen.
 
 ---
 
-## **6. Slutbön**
+### **6. Slutbön**
 Herre, tack för att du omsluter mig med din trofasthet.
-Tack att du stärker mina tankar, lugnar mitt hjärta och leder mina steg.
+Tack att du stärker mina tankar, lugnar mitt hjärta och leder mina steg — precis som du lovat.
 
 När jag möter press — tala din sanning till mig.  
 När jag möter oro — bär mig med din kraft.  
-När jag möter förvirring — lys med ditt ljus.
+När jag möter förvirring — lys med ditt ljus och visa mig vägen.
+
+Gör mitt hjärta stadigt i dig, du som är min klippa och min borg.  
+Låt mitt inre formas av samma kraft som verkar i mig, den kraft som uppväckte Jesus från de döda.  
+Låt min dag präglas av ditt ljus, din glädje och den seger du redan har gett mig.
 
 Jag tillhör dig, Herre.  
-Forma mitt inre, ge mig din frid, fyll mig med din kraft.  
+Jag går i den styrka du tränar i mig, och i den frid du låter bo i mitt hjärta.  
 Amen.
 
 ---`,
     categories: ['Kamp & befrielse', 'Inre styrka'],
-    createdAt: '2024-12-28T07:00:00Z',
+    createdAt: '2025-12-20T09:00:00Z',
     featured: true,
     tracks: [
       {
-        id: 'track1',
+        id: 'sta-fast-track-1',
         title: 'Instrumental bakgrund',
-        youtubeUrl: 'https://www.youtube.com/embed/oQMJBz5bcbg?si=L3N3mB8KktYyxtR5',
-        audioUrl: 'https://www.youtube.com/embed/oQMJBz5bcbg?si=L3N3mB8KktYyxtR5'
+        youtubeUrl: 'https://www.youtube.com/embed/oQMJBz5bcbg?si=L3N3mB8KktYyxtR5'
       }
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=600&auto=format&fit=crop'
+    imageUrl: TALA_VALSIGNELSER_STA_FAST_IMAGE
   },
   {
     id: 'b2',
