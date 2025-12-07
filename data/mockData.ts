@@ -1,5 +1,5 @@
 
-import { Song, Prayer, Article, BibleVerse } from '../types';
+import { Song, Prayer, Article, BibleVerse, Blessing } from '../types';
 
 const IMAGE_BASE_PATH = (() => {
   const base = import.meta.env.BASE_URL || '/';
@@ -528,6 +528,73 @@ alla ni som hoppas på Herren!`,
       { id: 't1', title: 'Mitt hjärta i stormen – reflektion', audioUrl: 'https://www.youtube.com/embed/oQMJBz5bcbg?si=mGSd6pPQTL4sQhDB' }
     ],
     imageUrl: 'https://images.unsplash.com/photo-1501975558162-0be7b8c5d2ff?q=80&w=1200&auto=format&fit=crop'
+  }
+];
+
+export const BLESSINGS: Blessing[] = [
+  {
+    id: 'b1',
+    title: 'Tala liv och ljus',
+    subtitle: 'En morgonproklamation för att bära frid in i dagen.',
+    body: `Jag talar liv, ljus och hopp över den här dagen.
+Jag väljer Guds väg och tar emot hans närvaro.
+Hans kärlek fyller mig, hans vishet leder mig,
+och hans frid bevarar mitt hjärta.
+
+Jag förklarar att jag är buren av nåd,
+att jag får kraft att älska och tjäna,
+och att jag får se Guds godhet i varje steg.
+
+I Jesu namn. Amen.`,
+    categories: ['Daglig välsignelse', 'Identitet i Kristus'],
+    tags: ['Proklamation', 'Morgon'],
+    createdAt: '2024-12-28T07:00:00Z',
+    featured: true,
+    tracks: [
+      { id: 't1', title: 'Still instrumental', audioUrl: 'https://www.youtube.com/embed/MvgXy-VFfxM?si=wMQQy6HvJX0Mcxw2' }
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=600&auto=format&fit=crop'
+  },
+  {
+    id: 'b2',
+    title: 'Välsignelse över familjen',
+    body: `Jag talar Guds beskydd över mitt hem.
+Herren är vår frid och vår styrka.
+Må hans kärlek fylla varje rum,
+och hans glädje vara vår gemensamma ton.
+
+Vi får vila i att Gud håller sin hand över oss,
+leder våra beslut och ger oss mod att älska varandra.
+
+Jag tackar dig, Jesus, för att du är mitt ibland oss.`,
+    categories: ['Familj', 'Trygghet'],
+    tags: ['Beskydd', 'Hem'],
+    createdAt: '2025-01-05T18:30:00Z',
+    tracks: [
+      { id: 't1', title: 'Quiet piano', audioUrl: 'https://www.youtube.com/embed/pPRdiutFEeA?si=1sK5DXPPEuiKe2CO' },
+      { id: 't2', title: 'Soft strings', audioUrl: 'https://www.youtube.com/embed/2L9ggxl0CMw?si=suN0wbI_6t01GYOG' }
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1498496294664-6b32b228ab46?q=80&w=600&auto=format&fit=crop'
+  },
+  {
+    id: 'b3',
+    title: 'Frimodighet och hopp',
+    subtitle: 'När du behöver nytt mod att tala liv.',
+    body: `Jag talar frimodighet över mig själv.
+Gud har inte gett mig modlöshetens ande,
+utan kraft, kärlek och självkontroll.
+
+Jag bekänner att jag är kallad att lysa,
+att mina ord kan bära hopp och läkedom.
+Helige Ande, fyll mina ord med nåd och sanning,
+så att jag får styrka att tala välsignelse där jag går.
+
+Jag väntar med tillit på vad Gud gör.`,
+    categories: ['Frimodighet', 'Nytt kapitel'],
+    tags: ['Hopp', 'Mod'],
+    createdAt: '2025-01-10T12:15:00Z',
+    tracks: [],
+    imageUrl: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=600&auto=format&fit=crop'
   }
 ];
 

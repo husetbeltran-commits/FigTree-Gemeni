@@ -9,6 +9,8 @@ import SongsPage from './pages/SongsPage';
 import SongDetailPage from './pages/SongDetailPage';
 import PrayersPage from './pages/PrayersPage';
 import PrayerDetailPage from './pages/PrayerDetailPage';
+import BlessingsPage from './pages/BlessingsPage';
+import BlessingDetailPage from './pages/BlessingDetailPage';
 import ArticlesPage from './pages/ArticlesPage';
 import ArticleDetailPage from './pages/ArticleDetailPage';
 import VersesPage from './pages/VersesPage';
@@ -26,14 +28,16 @@ const App: React.FC = () => {
             <Route path="/search" element={<SearchPage />} />
             
             <Route path="/songs" element={<SongsPage />} />
-            
+
             <Route path="/prayers" element={<PrayersPage />} />
-            
+            <Route path="/blessings" element={<BlessingsPage />} />
+
             <Route path="/articles" element={<ArticlesPage />} />
           </Route>
-          
+
           <Route path="/songs/:id" element={<SongDetailPage />} />
           <Route path="/prayers/:id" element={<PrayerDetailPage />} />
+          <Route path="/blessings/:id" element={<BlessingDetailPage />} />
           <Route path="/articles/:id" element={<ArticleDetailPage />} />
           <Route path="/verses" element={<VersesPage />} />
 

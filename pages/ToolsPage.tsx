@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import { Music, BookOpen, FileText, RefreshCw, ChevronLeft } from 'lucide-react';
+import { Music, BookOpen, FileText, RefreshCw, ChevronLeft, Sparkles } from 'lucide-react';
 
 const ToolsPage: React.FC = () => {
   const tools = [
@@ -11,13 +11,19 @@ const ToolsPage: React.FC = () => {
       icon: Music, 
       path: '/songs' 
     },
-    { 
-      title: 'Bön och meditation', 
-      desc: 'Utforska böner och kristna meditationer.', 
-      icon: BookOpen, 
-      path: '/prayers' 
+    {
+      title: 'Bön och meditation',
+      desc: 'Utforska böner och kristna meditationer.',
+      icon: BookOpen,
+      path: '/prayers'
     },
-    { 
+    {
+      title: 'Tala välsignelser',
+      desc: 'Tala in Guds kraft och vilja i ditt liv.',
+      icon: Sparkles,
+      path: '/blessings'
+    },
+    {
       title: 'Artiklar',
       desc: 'Läs texter om tro och livet med Kristus.',
       icon: FileText,

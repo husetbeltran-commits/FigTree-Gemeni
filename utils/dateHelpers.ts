@@ -38,6 +38,7 @@ export const formatDisplayDate = (createdAt: string) => {
   return new Intl.DateTimeFormat('sv-SE', { dateStyle: 'long', timeStyle: 'short' }).format(timeValue);
 };
 
+// Extend with Blessing once the "Senaste innehåll" rail should surface proclamations too.
 export const getOrderedContent = (articles: Article[], prayers: Prayer[], songs: Song[]) => ({
   latestArticle: getLatestByCreatedAt(articles),
   latestPrayer: getLatestByCreatedAt(prayers),

@@ -36,6 +36,7 @@ const HomePage: React.FC = () => {
   const featuredPrayer = PRAYERS.find(p => p.featured);
   const featuredArticle = ARTICLES.find(a => a.featured);
   
+  // Future: extend with BLESSINGS when we want featured proclamations in "Utvalt".
   const featuredItems = [
     {
       type: 'Sång',
@@ -57,6 +58,7 @@ const HomePage: React.FC = () => {
     },
   ].filter(item => item.data);
 
+  // Future: feed BLESSINGS into getOrderedContent once the latest content rail should include dem.
   const { latestSong, latestPrayer, latestArticle } = getOrderedContent(ARTICLES, PRAYERS, SONGS);
 
   // --- Dagens Ord State ---
@@ -311,6 +313,7 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-2 gap-3">
             <ToolCard to="/songs" title="Sångbank" icon={Music} desc="Hitta sånger" />
             <ToolCard to="/prayers" title="Bön" icon={BookOpen} desc="Meditationer" />
+            <ToolCard to="/blessings" title="Tala välsignelser" icon={Sparkles} desc="Guds kraft i ditt liv" />
             <ToolCard to="/articles" title="Artiklar" icon={FileText} desc="Läs om tro" />
           </div>
         </section>
