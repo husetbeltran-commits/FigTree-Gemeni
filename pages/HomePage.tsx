@@ -1,19 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import { SONGS, PRAYERS, ARTICLES } from '../data/mockData';
+import { SONGS, PRAYERS, ARTICLES, BLESSINGS } from '../data/mockData';
 import { ArrowRight, Music, BookOpen, FileText, RefreshCw, Sparkles } from 'lucide-react';
 import { getDailyVerse, getRandomVerse, getBookCategory, generateReflection } from '../utils/bibleHelpers';
-import { Article, BibleVerse, Prayer, Song } from '../types';
+import { Article, BibleVerse, Blessing, Prayer, Song } from '../types';
 import { getOrderedContent } from '../utils/dateHelpers';
 
 const FALLBACK_IMAGES = {
   article: 'https://images.unsplash.com/photo-1473181488821-2d23949a045a?q=80&w=800&auto=format&fit=crop',
   prayer: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=800&auto=format&fit=crop',
   song: 'https://images.unsplash.com/photo-1435224654926-ecc9f7fa028c?q=80&w=800&auto=format&fit=crop',
+  blessing: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=800&auto=format&fit=crop',
 };
 
-const getCoverImage = (item: Article | Prayer | Song | undefined, type: keyof typeof FALLBACK_IMAGES) => {
+const getCoverImage = (item: Article | Prayer | Song | Blessing | undefined, type: keyof typeof FALLBACK_IMAGES) => {
   if (!item) return FALLBACK_IMAGES[type];
 
   const candidates = [
@@ -35,8 +36,8 @@ const HomePage: React.FC = () => {
   const featuredSong = SONGS.find(s => s.featured);
   const featuredPrayer = PRAYERS.find(p => p.featured);
   const featuredArticle = ARTICLES.find(a => a.featured);
-  
-  // Future: extend with BLESSINGS when we want featured proclamations in "Utvalt".
+  const featuredBlessing = BLESSINGS.find(b => b.featured);
+
   const featuredItems = [
     {
       type: 'Sång',
@@ -56,10 +57,15 @@ const HomePage: React.FC = () => {
       path: `/articles/${featuredArticle?.id}`,
       image: getCoverImage(featuredArticle, 'article'),
     },
+    {
+      type: 'Välsignelse',
+      data: featuredBlessing,
+      path: `/blessings/${featuredBlessing?.id}`,
+      image: getCoverImage(featuredBlessing, 'blessing'),
+    },
   ].filter(item => item.data);
 
-  // Future: feed BLESSINGS into getOrderedContent once the latest content rail should include dem.
-  const { latestSong, latestPrayer, latestArticle } = getOrderedContent(ARTICLES, PRAYERS, SONGS);
+  const { latestSong, latestPrayer, latestArticle, latestBlessing } = getOrderedContent(ARTICLES, PRAYERS, SONGS, BLESSINGS);
 
   // --- Dagens Ord State ---
   // Initialize with the deterministic daily verse
@@ -126,6 +132,11 @@ const HomePage: React.FC = () => {
       }
     };
   }, []);
+
+  const getPreviewText = (item: Article | Prayer | Song | Blessing) => {
+    const content = (item as any).body || (item as any).lyrics || '';
+    return content ? `${content.substring(0, 80)}...` : '';
+  };
 
   return (
     <div className="animate-fade-in">
@@ -251,13 +262,14 @@ const HomePage: React.FC = () => {
           <h2 className="text-lg font-bold text-primary mb-3">Senaste innehåll</h2>
           <div className="space-y-3">
             {[
-              { label: 'Senaste artikel', item: latestArticle, path: `/articles/${latestArticle.id}` },
-              { label: 'Senaste bön', item: latestPrayer, path: `/prayers/${latestPrayer.id}` },
-              { label: 'Senaste sång', item: latestSong, path: `/songs/${latestSong.id}` },
-            ].map((row, idx) => {
+              { label: 'Senaste artikel', item: latestArticle, path: `/articles/${latestArticle.id}`, type: 'article' as const },
+              { label: 'Senaste bön', item: latestPrayer, path: `/prayers/${latestPrayer.id}`, type: 'prayer' as const },
+              { label: 'Senaste sång', item: latestSong, path: `/songs/${latestSong.id}`, type: 'song' as const },
+              latestBlessing && { label: 'Senaste välsignelse', item: latestBlessing, path: `/blessings/${latestBlessing.id}`, type: 'blessing' as const }, // latest blessing for “Tala välsignelser”-tool
+            ].filter(Boolean).map((row, idx) => {
               const image = getCoverImage(
-                row.item as Article | Prayer | Song | undefined,
-                row.label.includes('artikel') ? 'article' : row.label.includes('bön') ? 'prayer' : 'song'
+                row.item as Article | Prayer | Song | Blessing | undefined,
+                row.type
               );
 
               return (
@@ -270,11 +282,13 @@ const HomePage: React.FC = () => {
                         alt={`${row.label} – ${row.item.title}`}
                         onError={(e) => {
                           // Ensures broken image URLs gracefully fall back per content type
-                          const fallback = row.label.includes('artikel')
+                          const fallback = row.type === 'article'
                             ? FALLBACK_IMAGES.article
-                            : row.label.includes('bön')
+                            : row.type === 'prayer'
                               ? FALLBACK_IMAGES.prayer
-                              : FALLBACK_IMAGES.song;
+                              : row.type === 'song'
+                                ? FALLBACK_IMAGES.song
+                                : FALLBACK_IMAGES.blessing;
 
                           if (e.currentTarget.src !== fallback) {
                             e.currentTarget.src = fallback;
@@ -284,15 +298,18 @@ const HomePage: React.FC = () => {
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center text-secondary">
-                        <FileText size={20} />
+                        {row.type === 'blessing' ? <Sparkles size={20} /> : <FileText size={20} />}
                       </div>
                     )}
                   </div>
-                
+
                 {/* Text */}
                 <div className="flex-1 min-w-0">
                   <span className="text-[10px] text-accent font-bold uppercase tracking-wider block mb-0.5">{row.label}</span>
                   <h4 className="font-medium text-primary truncate leading-tight">{row.item.title}</h4>
+                  {getPreviewText(row.item as any) && (
+                    <p className="text-xs text-secondary line-clamp-1">{getPreviewText(row.item as any)}</p>
+                  )}
                 </div>
                 
                 <div className="pr-2 text-secondary group-hover:text-primary transition-colors">

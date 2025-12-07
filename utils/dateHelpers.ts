@@ -1,4 +1,4 @@
-import { Article, Prayer, Song } from '../types';
+import { Article, Blessing, Prayer, Song } from '../types';
 
 type CreatedEntity = { createdAt: string; id?: string };
 
@@ -38,9 +38,9 @@ export const formatDisplayDate = (createdAt: string) => {
   return new Intl.DateTimeFormat('sv-SE', { dateStyle: 'long', timeStyle: 'short' }).format(timeValue);
 };
 
-// Extend with Blessing once the "Senaste innehåll" rail should surface proclamations too.
-export const getOrderedContent = (articles: Article[], prayers: Prayer[], songs: Song[]) => ({
+export const getOrderedContent = (articles: Article[], prayers: Prayer[], songs: Song[], blessings: Blessing[]) => ({
   latestArticle: getLatestByCreatedAt(articles),
   latestPrayer: getLatestByCreatedAt(prayers),
   latestSong: getLatestByCreatedAt(songs),
+  latestBlessing: getLatestByCreatedAt(blessings),
 });
