@@ -342,7 +342,7 @@ Jag vilar i dig. Amen.`,
   {
     id: '4',
     title: 'Bön att tala välsignelser över ditt liv',
-    body: `Käre Herre,
+    body: `Herre,
  jag kommer inför dig med ett hjärta fyllt av tacksamhet och lovsång.
  Jag prisar ditt heliga namn,
  för du är Skaparen av allt.
@@ -393,134 +393,120 @@ Amen.`,
   },
   {
     id: '5',
-    title: 'Mitt hjärta i stormen',
+    title: 'Mitt hjärta i stormen (Psalm 31)',
     subtitle: 'En omskriven och förenklad version av Psalm 31 (SFB15), skapad för att hjälpa dig att be när natten känns tung och tankarna rusar.',
-    body: `2  
-Till dig, Herre, kommer jag för skydd.  
-Låt mig aldrig hamna i skam.  
-Rädda mig med din godhet och sanning.  
+    body: `2 Till dig, Herre, tar jag min tillflykt.
+Låt mig aldrig behöva skämmas,
+rädda mig i din rättfärdighet.
 
-3  
-Lyssna på mig, Herre.  
-Kom snabbt och hjälp mig!  
-Var min trygga plats,  
-mitt starka försvar.  
+3 Vänd ditt öra till mig,
+skynda till min räddning!
+Var min fasta klippa,
+en borg till min räddning,
 
-4  
-För du är min klippa och min trygghet.  
-Led mig och visa vägen  
-för ditt namns skull.  
+4 för du är min klippa och min borg.
+Du ska leda och visa mig vägen
+för ditt namns skull,
 
-5  
-Befria mig ur fällorna  
-som andra lagt för mig,  
-för du är min beskyddare.  
+5 du ska lossa mig ur fällorna
+de lagt ut för mig,
+för du är mitt beskydd.
 
-6  
-I dina händer lämnar jag mitt liv.  
-Du har köpt mig fri, Herre,  
-du trofaste Gud.  
+6 I din hand överlämnar jag
+min ande.
+Du har friköpt mig, Herre,
+du trofaste Gud.
 
-7  
-Jag avskyr det som är tomt och falskt,  
-jag litar på Herren.  
+7 Jag hatar dem som håller fast
+vid tomma avgudar,
+jag litar på Herren.
 
-8  
-Jag vill glädjas  
-över din kärlek.  
-Du ser min smärta  
-och du vet hur jag mår när allt är svårt.  
+8 Jag vill jubla och glädjas
+över din nåd,
+att du ser mitt lidande
+och du vet hur mitt inre mår när allt är svårt. 
 
-9  
-Du låter mig inte falla  
-i fienders händer.  
-Du ger mig plats att andas.  
+9 Du utlämnar mig inte
+i fiendens hand,
+du ställer mina fötter
+på rymlig plats.
 
-10  
-Var nära mig, Herre, jag är i nöd.  
-Sorgen sliter på mig,  
-på insidan och utsidan.  
+10 Var nära mig, Herre,
+jag är i nöd!
+Grämelse förtär mitt öga,
+min själ och min kropp.
 
-11  
-Mitt liv känns fullt av sorg,  
-mina år av suckar.  
-Jag tappar kraft  
-på grund av min synd,  
-min kropp orkar inte mer.  
+11 Mitt liv försvinner i sorg,
+mina år i suckar.
+Min kraft är bruten
+genom min synd,
+mina ben orkar inte mer.
 
-12  
-På grund av mina fiender  
-har jag blivit en skam för människor.  
-De som känner mig blir rädda  
-och undviker mig.  
+12 för alla mina fienders skull.
+Jag har blivit en skam
+för andra,
+och en skräck
+för dem som känner mig.
+De som ser mig på gatan
+flyr för mig.
 
-13  
-Det är som om jag är bortglömd,  
-som om jag inte längre finns.  
-Som ett trasigt kärl  
-man slängt bort.  
+13 Jag är glömd och borta
+ur deras hjärtan, som död,
+jag har blivit som ett krossat kärl.
 
-14  
-Jag hör vad andra viskar,  
-oro överallt.  
-De går ihop mot mig  
-och planerar ont.  
+14 Jag hör vad många viskar,
+skräck från alla håll!
+De går ihop mot mig,
+smider planer för att ta mitt liv.
 
-15  
-Men jag litar på dig, Herre.  
-Jag säger: ”Du är min Gud.”  
+15 Men jag litar på dig, Herre,
+jag säger: "Du är min Gud."
+16  Min tid är i dina händer.
+Rädda mig från mina fienders hand,
+från dem som förföljer mig.
 
-16  
-Min tid är i dina händer.  
-Rädda mig från dem som vill mig illa.  
+17 Låt ditt ansikte lysa
+över din mig,
+fräls mig genom din nåd.
 
-17  
-Låt ditt ansikte lysa över mig.  
-Rädda mig med din kärlek.  
+18 Herre, låt mig inte
+behöva skämmas,
+jag ropar till dig!
+Låt de gudlösa få skämmas,
+låt dem tystna i dödsriket.
 
-18  
-Herre, låt mig inte stå där och skämmas  
-när jag ropar till dig.  
-Låt de som gör det onda stå för sina handlingar  
-och tystna.  
+19 Låt lögnarnas läppar förstummas,
+de som talar fräckhet i högmod
+och förakt mot den som vill följa dig.
 
-19  
-Tysta lögnarnas ord,  
-de som talar stolta och hårda ord  
-mot den som vill leva rätt.  
+20 Hur stor är inte din godhet,
+som du sparar åt dem
+som älskar dig
+och visar inför människors 
+mot dem som flyr till dig!
 
-20  
-Så stor är din godhet,  
-den du sparar åt dem som älskar dig  
-och visar inför människor  
-mot dem som flyr till dig!  
+21 Du tar dem i ditt ansiktes beskydd
+mot människors intriger,
+du gömmer dem i din hydda
+undan elaka tungor.
 
-21  
-Du skyddar dem nära dig  
-från människors intriger.  
-Du tar dem i din trygghet  
-bort från elaka ord.  
+22 Lovad är Herren!
+Han har visat mig
+sin underbara nåd
+i en stad i krig och under attack.
 
-22  
-Herren är värd att prisas!  
-Han har visat mig sin kärlek  
-även när allt känns som en stad i kring och under attack.  
+23 Jag sade i min ångest:
+"Jag är avskuren från dina ögon!"
+Men du hörde min bön om nåd
+när jag ropade till dig.
 
-23  
-Jag säger i min ångest:  
-”Jag är avskuren från dina ögon.”  
-Men du hörde min bön om nåd  
-när jag ropade till dig.  
+24 Älska Herren,
+alla ni hans trogna!
+Herren bevarar de trofasta,
+men den som handlar i högmod
+straffar han strängt.
 
-24  
-Älska Herren,  
-alla ni som följer honom!  
-Herren tar hand om dem som är honom trogna,  
-men den som är högmodig  
-får ta konsekvenserna.  
-
-25  
-Var starka och modiga i era hjärtan,  
+25 Var starka och modiga i era hjärtan,
 alla ni som hoppas på Herren!`,
     categories: ['02–04 på natten', 'I stormen', 'Motarbetad och bortglömd'],
     tags: ['Nattbön', 'Storm', 'Psalm 31'],
